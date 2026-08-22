@@ -27,6 +27,31 @@ _Last updated: 2026-08-22_
 
 **Note:** FRGE stock itself is no longer investable (Schwab subsidiary) — only the underlying marketplace and its listed private companies remain relevant to track.
 
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+Live Forge Price snapshot (source: forgeglobal.com):
+
+| Company | Forge Price | Last round valuation |
+|---|---|---|
+| Databricks | $242.04 | $134B |
+| Shield AI | $163.79 | $12.7B |
+| Polymarket | $136.55 | $14.21B |
+| Stripe | $72.45 | $159B |
+| Figure AI | $174.00 | $39B |
+| Glean | $44.43 | $7.2B |
+| Saronic | $29.62 | $9.25B |
+| Replit | $259.43 | $9B |
+| SambaNova Systems | $127.10 | $11B |
+| Lightmatter Technology | $96.52 | $4.4B |
+| PsiQuantum | $28.54 | $7B |
+| Moonshot AI | listed, price unavailable | — |
+
+Business update (2026-03-24): Forge named to Fast Company's World's Most Innovative Companies of 2026, following the Schwab acquisition close (2026-03-02).
+
+Source: [https://forgeglobal.com/](https://forgeglobal.com/) — 🟢 high confidence
+
 ## Sources
 - [Charles Schwab Completes Acquisition of Forge Global](http://forgeglobal.com/press-releases/charles-schwab-completes-acquisition-of-forge-global)
 - [Forge Global (FRGE) Financials Overview — StockAnalysis](https://stockanalysis.com/stocks/frge/financials/)

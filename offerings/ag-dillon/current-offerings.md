@@ -34,3 +34,12 @@ _Last updated: 2026-08-22_
 - [This Week in Pre-IPO Stocks podcast feed](https://rss.buzzsprout.com/2079052.rss)
 
 **Caveat:** RIA-gated distribution means current fund composition and pricing are not publicly verifiable; treat anything not directly sourced above as unconfirmed.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+- Latest identifiable close: **September 26, 2025** — six funds closed naming **Anduril, xAI, Groq, Lambda Labs, Together AI**, and one unnamed space-economy company. No offering-specific price/valuation disclosed.
+- Note: this differs from the March 7, 2025 close cited above (Anduril, OpenAI, xAI, Groq, Figure AI) — appears to be a separate, later cohort. Company overlap (Anduril, xAI, Groq) suggests thematic continuity across closes.
+- Source: [https://x.com/AaronGDillon/status/1963935297546092966](https://x.com/AaronGDillon/status/1963935297546092966) — 🟡 medium confidence
+

@@ -35,3 +35,16 @@ _Last updated: 2026-08-22_
 - ARKVX holdings CSV: `https://assets.ark-funds.com/fund-documents/funds-etf-csv/ARK_VENTURE_FUND_ARKVX_HOLDINGS.csv` (authoritative source; unreachable from research environment)
 
 **Caveat:** Most recent verifiable figures are from Q1 2026 filings and June 2026 press snapshots, not August 2026. SEC NPORT-P/N-CSRS filings are the authoritative source when a discrepancy arises.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+**More current than the section above** — ARK's published holdings schedule dated **2026-07-31** shows:
+
+- **SpaceX** — largest holding at 8.72% of NAV (down from the 11–17% range cited earlier; consistent with continued AUM growth diluting the position). Latest round valuation: $1.75T (2026-03-17).
+- **OpenAI** — 6.18% of NAV. Latest round valuation: $852B (2026-04-22).
+- Other top-10 names: Anthropic ($965B valuation, 2026-04-21 round), Lila Sciences ($1.3B, new to top-10), Tenstorrent Holdings ($3.2B), Ayar Labs ($3.75B), Kalshi ($22B), Figure AI ($39B), Wayve ($7.47B), Stripe ($159B).
+
+Source: [ARKVX Holdings PDF](https://assets.ark-funds.com/fund-documents/funds-etf-pdf/ARK_VENTURE_FUND_ARKVX_HOLDINGS.pdf) — 🟢 high confidence, most recent data point found across both research passes.
+

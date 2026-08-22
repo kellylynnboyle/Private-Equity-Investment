@@ -30,3 +30,12 @@ Axiom Space, Bluesky, Circle, Cohere, Groq, Kraken (pre-IPO), Oura, Upstart, Gat
 - [Alumni Ventures — Wikipedia](https://en.wikipedia.org/wiki/Alumni_Ventures)
 
 **Caveat:** av.vc was unreachable from the research environment; figures cross-verified via cached copies and third-party trackers (Tracxn, Yahoo Finance). Spot-check av.vc/av-funds directly before relying on exact fund vintages/close dates.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+- Confirms **Global Bridge Fund Series** (announced 2026-06-08): country/region-anchored funds, typically ~$100M each. First vehicle, the **Japan-U.S. Bridge Fund**, held its first close **2026-03-31**.
+- Portfolio names flagged in this pass: Groq, Oura, Rigetti, Circle, Lambda (no pricing disclosed — consistent with AV's fund-of-deals structure rather than direct share pricing).
+- Source: [av.vc blog — Global Bridge Fund Series](http://av.vc/blog/introducing-the-alumni-ventures-global-bridge-fund-series) — 🟢 high confidence
+

@@ -29,3 +29,12 @@ _Last updated: 2026-08-22_
 - [EquityZen Celebrates 11 Years of Multi-Company Funds — GlobeNewswire](https://www.globenewswire.com/news-release/2025/09/16/3151024/0/en/EquityZen-Celebrates-11-Years-of-Multi-Company-Funds-Pre-IPO-Diversification-With-a-Single-Investment.html)
 
 **Caveat:** equityzen.com was unreachable from the research environment; fund-series figures came from search-engine snippets/aggregators — spot-check directly on equityzen.com before relying on exact numbers.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+- **Fee cut (2026-02-19):** Morgan Stanley Wealth Management announced EquityZen would immediately reduce buy- and sell-side transaction fees from 5% to **2.5%** for most transactions, while retaining the $5,000 investment minimum. Confirms Morgan Stanley's acquisition closed January 2026.
+- No specific list of currently open single-company offerings was returned by this pass — supports the earlier caveat that live inventory isn't reliably published outside the platform itself.
+- Source: [Morgan Stanley press release](https://www.morganstanley.com/press-releases/mswm-reduces-fees-on-private-shares-marketplace-equityzen) — 🟢 high confidence
+

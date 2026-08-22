@@ -34,3 +34,15 @@ _Last updated: 2026-08-22_
 - [MarketChameleon: VCX lockup analysis](https://marketchameleon.com/articles/b/2026/7/27/vcx-lockup-expiration-accelerated-analysis)
 
 **Caveat:** No holdings data more recent than the March 31, 2026 N-CSR/A filing found; verify current price/premium against a live quote before relying on it.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+Confirms the March 31, 2026 N-CSR/A holdings above, plus one addition not previously captured:
+
+- **QTS Data Centers** — $38.779M aggregate fair value (previously missed in the manual research pass).
+- Confirms lockup acceleration: restricted shares eligible to trade beginning **2026-08-14** (announced 2026-07-24).
+
+Source: [SEC N-CSR/A filing](https://www.sec.gov/Archives/edgar/data/1867090/000199937126011950/fundrise-ncsra_033126.htm) — 🟢 high confidence
+

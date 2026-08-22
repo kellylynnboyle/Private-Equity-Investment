@@ -36,3 +36,25 @@ DXYZ traded ~$32.75–$34.40 mid-to-late Aug 2026 vs. last reported NAV of $24.5
 - [DXYZ vs Fundrise VCX 2026 — CrowdfundedWealth](https://www.crowdfundedwealth.com/reviews/fundrise-vcx-vs-dxyz)
 
 **Caveat:** No Q2 2026 (June 30) NAV/holdings report found as of Aug 22, 2026; most recent official NAV is March 31, 2026. Current market price is real-time, so the premium is an estimate pending the next filing.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+Form N-PORT filed **2026-05-29** (portfolio as of 2026-03-31) — dollar-value confirmation, largest two exposures by SEC-reported fair value:
+
+| Company | Fair value |
+|---|---|
+| Anthropic | $134,092,223 |
+| SpaceX | $107,309,945 |
+| OpenAI | $42,726,675 |
+| OpenEvidence | $33,973,673 |
+| Shield AI | $31,052,302 |
+| Databricks | $18,206,593 |
+| Chaos Industries | $15,712,254 |
+| Hermeus | $15,000,000 |
+| Beast Industries | $15,000,000 |
+| Tenstorrent | $12,500,000 |
+
+Source: [SEC Form N-PORT](https://www.sec.gov/Archives/edgar/data/1843974/000089418926016628/xslFormNPORT-P_X01/primary_doc.xml) — 🟢 high confidence
+

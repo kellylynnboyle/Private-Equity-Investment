@@ -30,3 +30,19 @@ Top 20 most-traded names drove 86% of Hiive's Q2 2026 trading value (top 5 = ove
 - [Hiive Stock securities page](https://www.hiive.com/securities/hiive-stock)
 
 **Caveat:** hiive.com and Bloomberg were unreachable from the research environment; built from search-result snippets — spot-check hiive.com/hiive50 and hiive.com/securities directly.
+
+---
+
+## Parallel AI Tracker Update — 2026-08-22
+
+Hiive50 aggregated market prices (site update dated 2026-06-26; user orders/transactions, not Hiive's own holdings):
+
+| Company | Aggregated market price |
+|---|---|
+| Polymarket | $138.72/sh |
+| Databricks | $259.38/sh |
+| Lambda | $47.25/sh |
+| Tenstorrent | $62.30/sh |
+
+Source: [https://www.hiive.com/](https://www.hiive.com/) — 🟢 high confidence on source, 🟡 medium on data freshness (June snapshot, not August).
+
