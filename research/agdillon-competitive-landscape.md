@@ -16,6 +16,11 @@ Firms offering the same core mechanic: an advisor or investor selects individual
 - **EquityZen** — over a decade serving both individual accredited investors and advisors. Historically leaned more on diversified multi-company funds but also offers single-company deals.
 - **Hiive** — newer entrant in the same secondary-marketplace category, increasingly appearing alongside Forge and EquityZen in third-party platform comparisons.
 - **Augment** — Austin-based fintech (founded 2022), a FINRA-registered broker-dealer / SEC-registered ATS covering 300+ late-stage names; $12M Series A (Oct 2025), $400M+ in pre-IPO assets managed, 2–4% fees. Smaller and less independently covered than the other three, but structurally the same single-name-selection mechanic and the lowest stated minimum ($10K, with a $100 minimum reportedly coming) of the group. Added to this tracker 2026-08-31.
+- **North Capital PPEX** — SEC-registered ATS run through North Capital's own broker-dealer subsidiary; company-reported $8.7B lifetime secondary volume across 1,250+ assets. RFQ/standing-order execution model rather than a live public book; retail/RIA accessibility unconfirmed. Added 2026-08-31.
+- **FNEX** — FINRA-regulated brokered secondary platform (institutional-leaning, confidential-execution model); named a $58.5M SpaceX secondary trade in 2025 plus OpenAI, Anthropic, and Databricks activity. Added 2026-08-31.
+- **MicroVentures** — broker-dealer combining Reg CF crowdfunding with a secondary-liquidity matching service; mixed retail/accredited investor base (primary tickets from $100) rather than accredited-only. More curated deal flow than open catalog. Added 2026-08-31.
+- **StartEngine Secondary (SE Secondary)** — SEC-registered ATS, but scoped only to securities originally issued through StartEngine's own Reg CF/Reg A+ platform, not a general late-stage-unicorn catalog. Included for completeness as a lower-cost secondary structure, not a like-for-like Forge/EquityZen peer. Added 2026-08-31.
+- **Jarsy** — retail-facing tokenized/SPV pre-IPO portal, $10 minimum (far below every other platform here), markets SpaceX/Anthropic/Stripe exposure. **Jarsy, Inc. is explicitly not a registered broker-dealer or investment adviser** — treat as a high-interest watchlist entry pending confirmation of its legal/custody structure, not a fully vetted peer. Added 2026-08-31.
 
 ## Tier 2 — Asset-class overlap, different wrapper
 
@@ -40,9 +45,24 @@ There is no published "AG Dillon competitor set" from a research firm — this l
 - Alumni Ventures — Venture Capital Guide for RIAs
 - Private Equity International — AG Dillon & Co. Institution Profile
 - Augment — The Secondary Marketplace for Private Stock (augment.market)
+- PPEX ATS homepage (ppex.com) / North Capital Private Securities Platform
+- FNEX homepage / FNEX Capital, LLC FINRA BrokerCheck (CRD 166316)
+- MicroVentures — Buy or Sell Pre-IPO & Private Stock (Liquidity)
+- StartEngine Investor FAQ / Regulation Best Interest Disclosure
+- Jarsy — Pre-IPO Marketplace homepage / Tracxn funding record
 
 ---
 
 ## Update — 2026-08-31
 
 Added **Augment** to Tier 1. It was surfaced while researching platform availability for a specific name (Impulse Space) and wasn't previously in this tracker's competitor set, despite being a licensed FINRA broker-dealer / SEC-registered ATS competing in the same single-name-selection lane as Forge, EquityZen, and Hiive. Full mechanics/fees in `offerings/augment/current-offerings.md`. No other changes to the Tier 1/Tier 2 split, AG Dillon's fee terms, or the other seven tracked firms this update.
+
+## Update — 2026-08-31 (2)
+
+Ran a Parallel AI deep-research pass to check for any remaining untracked secondary-marketplace competitors beyond Augment. Added five more to Tier 1: **North Capital PPEX, FNEX, MicroVentures, StartEngine Secondary, and Jarsy**. Full mechanics/fees/caveats for each in their respective `offerings/<firm>/current-offerings.md` files.
+
+Two of these carry real classification caveats worth flagging explicitly rather than treating as clean like-for-like peers:
+- **StartEngine Secondary** only trades securities StartEngine itself originally issued — it's a narrower, issuer-linked secondary tier, not a general unicorn catalog like Forge/EquityZen/Hiive/Augment/PPEX.
+- **Jarsy** is not a registered broker-dealer or investment adviser (self-disclosed). Its $10 minimum and named holdings (SpaceX, Anthropic, Stripe) are marketing claims pending confirmation of the actual legal/custody structure — treat as a watchlist entry, not a vetted peer, until that's verified.
+
+The deep-research pass also surfaced several adjacent-but-not-direct platforms that were deliberately **not** added as Tier 1 competitors: EquityBee and Secfi (employee stock-option financing, not share trading), ShareNett (family-office-only network), and Securitize/Texture Capital/tZERO (digital-securities infrastructure with no confirmed unicorn-share catalog). Also checked and ruled out as defunct/inactive: YieldVault ("coming soon" as of this check), ShareBid (deadpooled 2023), InvestX (fund manager, not a marketplace), and Public.com (does not offer private-company shares at all). No changes to Tier 2, AG Dillon's fee terms, or the previously tracked firms.
