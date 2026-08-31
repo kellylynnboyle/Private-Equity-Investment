@@ -15,6 +15,7 @@ Firms offering the same core mechanic: an advisor or investor selects individual
 - **Forge Global (NYSE: FRGE)** — the closest direct comparison. Publicly traded, runs a dedicated wealth-manager/RIA channel, and lets investors select specific companies off its marketplace — the same "you pick Anduril, you pick Baseten" value proposition AG Dillon sells.
 - **EquityZen** — over a decade serving both individual accredited investors and advisors. Historically leaned more on diversified multi-company funds but also offers single-company deals.
 - **Hiive** — newer entrant in the same secondary-marketplace category, increasingly appearing alongside Forge and EquityZen in third-party platform comparisons.
+- **Augment** — Austin-based fintech (founded 2022), a FINRA-registered broker-dealer / SEC-registered ATS covering 300+ late-stage names; $12M Series A (Oct 2025), $400M+ in pre-IPO assets managed, 2–4% fees. Smaller and less independently covered than the other three, but structurally the same single-name-selection mechanic and the lowest stated minimum ($10K, with a $100 minimum reportedly coming) of the group. Added to this tracker 2026-08-31.
 
 ## Tier 2 — Asset-class overlap, different wrapper
 
@@ -38,3 +39,10 @@ There is no published "AG Dillon competitor set" from a research firm — this l
 - Fundrise VCX Listing: Everything You Need to Know
 - Alumni Ventures — Venture Capital Guide for RIAs
 - Private Equity International — AG Dillon & Co. Institution Profile
+- Augment — The Secondary Marketplace for Private Stock (augment.market)
+
+---
+
+## Update — 2026-08-31
+
+Added **Augment** to Tier 1. It was surfaced while researching platform availability for a specific name (Impulse Space) and wasn't previously in this tracker's competitor set, despite being a licensed FINRA broker-dealer / SEC-registered ATS competing in the same single-name-selection lane as Forge, EquityZen, and Hiive. Full mechanics/fees in `offerings/augment/current-offerings.md`. No other changes to the Tier 1/Tier 2 split, AG Dillon's fee terms, or the other seven tracked firms this update.
