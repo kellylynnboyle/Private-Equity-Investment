@@ -57,3 +57,26 @@ competitive research elsewhere in this repo. That file's financial fields
 in from information Kelly provides or an actual account/custodian statement.
 An automated routine must never fabricate or estimate those figures; leave
 them marked `TBD` until supplied.
+
+## Self-improvement artifact — "AG Dillon & Co. Monitor"
+
+In addition to the Open Brain memory step, this routine maintains a
+human-readable dashboard as a published Artifact:
+`https://claude.ai/code/artifact/281090cc-9098-46da-ad70-58a58374e64f`
+("AG Dillon & Co. Monitor"). Open Brain is what future runs *search*; this
+artifact is the readable summary Kelly actually looks at.
+
+At the end of every routine run:
+
+1. Read the artifact first (`Artifact` tool, `action: "read"`) — never
+   republish from memory or from a stale local copy.
+2. Append exactly one row to its Run Log for today's date: a flag (`silent`
+   or `notify`, matching whatever this run decided) and a one-line note of
+   what was checked and found.
+3. If PR #1 (or whatever holds the unmerged baseline at the time) merges,
+   update or remove the Blocker card to reflect it.
+4. Refresh the summary stats (AUM/funds, fee terms, firms tracked, PR age)
+   only when this run found an actual change — leave them alone on a
+   no-op/no-material-change run.
+5. Publish with `url` set to the artifact's existing URL so it updates in
+   place rather than creating a duplicate artifact.
