@@ -1,5 +1,7 @@
 # Forge Global — Current Offerings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Status change:** Forge Global is no longer independently public. Charles Schwab completed its $660M all-cash acquisition ($45/share) on **March 2, 2026**; FRGE delisted from NYSE. Forge now operates as a wholly-owned Schwab subsidiary, mid-integration into Schwab's platform for its 38M brokerage accounts and RIAs.

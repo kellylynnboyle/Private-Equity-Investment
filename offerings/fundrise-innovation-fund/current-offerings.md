@@ -1,5 +1,7 @@
 # Fundrise Innovation Fund (NYSE: VCX) — Current Holdings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Structure:** Publicly traded evergreen VC fund (formerly Fundrise Innovation Fund, LLC); listed on NYSE March 19, 2026.

@@ -1,5 +1,7 @@
 # Destiny Tech100 (NYSE: DXYZ) — Current Holdings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Structure:** Publicly traded closed-end fund; 27 total positions as of latest filing, targeting 100.

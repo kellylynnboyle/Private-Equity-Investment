@@ -1,5 +1,7 @@
 # ARK Venture Fund (ARKVX) — Current Holdings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Structure:** Actively managed closed-end interval fund (quarterly repurchase offers, not daily liquidity); mix of pre-IPO private companies and public disruptive-innovation equities.

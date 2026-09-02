@@ -1,5 +1,7 @@
 # Alumni Ventures — Current Offerings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Firm overview:** Largest VC platform for individual accredited investors — $1.4–1.5B+ capital raised, 11,000+ investors, 1,600+ portfolio companies. Offices in Boston, NY, Chicago, Menlo Park, Manchester NH, plus new London and Tokyo offices (2026).

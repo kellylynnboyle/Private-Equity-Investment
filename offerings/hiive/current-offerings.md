@@ -1,5 +1,7 @@
 # Hiive — Current Offerings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 ## Scale

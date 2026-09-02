@@ -1,5 +1,7 @@
 # Jarsy — Current Offerings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-31_
 
 ## ⚠️ Regulatory status — read before comparing to other platforms

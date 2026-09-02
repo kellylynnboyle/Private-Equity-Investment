@@ -1,5 +1,7 @@
 # AG Dillon & Co. — Current Offerings
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Last updated: 2026-08-22_
 
 **Bottom line:** AG Dillon is a small, RIA-distributed shop (Aaron Dillon, NY). Specific company-level holdings inside the currently open AGDF-series funds sit behind a password-protected advisor portal and are not publicly disclosed. What follows is what's publicly confirmable.

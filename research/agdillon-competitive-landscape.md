@@ -1,5 +1,7 @@
 # AG Dillon & Co. — Competitive Landscape
 
+**Prepared for Boyle Family Office — internal research only, not investment advice.**
+
 _Prepared: 2026-08-22_
 
 ## Context
