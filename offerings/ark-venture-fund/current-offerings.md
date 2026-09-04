@@ -50,3 +50,34 @@ _Last updated: 2026-08-22_
 
 Source: [ARKVX Holdings PDF](https://assets.ark-funds.com/fund-documents/funds-etf-pdf/ARK_VENTURE_FUND_ARKVX_HOLDINGS.pdf) — 🟢 high confidence, most recent data point found across both research passes.
 
+---
+
+## Update — 2026-09-04 (Holdings snapshot, 08/31/2026 vs. 07/31/2026)
+
+ARK's monthly holdings CSVs for 08/31/2026 and 07/31/2026 (source: `ARK_VENTURE_FUND_ARKVX_HOLDINGS.csv`, the authoritative URL cited above) show 92 positions as of 08/31/2026 (up from 85 on 07/31/2026), 99.99% of NAV disclosed. Top 15 by weight, with month-over-month change in percentage points:
+
+| # | Company | Ticker | Weight (08/31) | MoM |
+|---|---|---|---|---|
+| 1 | SpaceX | SPCX | 7.54% | -1.18 |
+| 2 | Kalshi Inc. | — | 5.81% | +2.95 |
+| 3 | Ayar Labs | — | 5.65% | +2.73 |
+| 4 | OpenAI | — | 5.26% | -0.62 |
+| 5 | Stripe, Inc. | — | 4.16% | -0.49 |
+| 6 | Anthropic, Inc. | — | 3.86% | -0.46 |
+| 7 | Lila Sciences, Inc. | — | 3.71% | -0.45 |
+| 8 | Crusoe Inc | — | 3.66% | +1.32 |
+| 9 | Tenstorrent Holdings Inc. | — | 3.17% | -0.42 |
+| 10 | Figure AI Inc. | — | 2.35% | -0.28 |
+| 11 | Replit, Inc. | — | 2.33% | -0.27 |
+| 12 | Wayve | — | 2.33% | -0.28 |
+| 13 | Freenome, Inc | — | 2.30% | +0.34 |
+| 14 | Databricks, Inc. | — | 2.06% | -0.24 |
+| 15 | K2 Space | — | 1.92% | -0.23 |
+
+- **New positions (Aug):** Cosm Experience Holdings (0.93%), Stoke Space Technologies (0.78%), The Boring Company (0.39%), plus 5 sub-0.3% notes/SAFEs.
+- **Exited:** Roblox Corporation (RBLX), was 0.36%.
+- **Largest common-holding decline:** Alamar Biosciences (-0.67pt).
+- SpaceX remains the top holding but continued tapering (was 8.72% at 07/31 per the entry above, now 7.54%). Kalshi and Ayar Labs both roughly doubled weight month-over-month — the two largest single-name moves this period.
+
+Source: ARK Venture Fund (ARKVX) monthly holdings CSVs, 08/31/2026 and 07/31/2026, ark-funds.com — 🟢 primary source (fund's own official holdings disclosure). Note on provenance: this data was surfaced via a CSV upload in an earlier same-day session and had been published to this repo's companion dashboard artifact (`AG Dillon & Co. Monitor`) but not yet committed to this file; this update persists it here so it isn't lost to git history, per this repo's convention that dated research belongs in the tracked `offerings/` files, not only the dashboard. Not independently re-fetched from ark-funds.com by this run.
+
