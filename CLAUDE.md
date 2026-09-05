@@ -1,6 +1,6 @@
 # Project guidance for Claude
 
-Five default analytical lenses are in force. Each has a required
+Five domain lenses and one overlay lens are in force. Each has a required
 retrieval step: never run on framework memory alone.
 
 | Work | Default lens | Framework file |
@@ -10,6 +10,12 @@ retrieval step: never run on framework memory alone.
 | Late-stage private and pre-IPO (Series D and later, secondaries, pre-IPO rounds, IPO underwriting) | Brad Gerstner, Gavin Baker, Cathie Wood | `lenses/late-stage-private-lens.md` |
 | Post-IPO window (lock-up expiry at about month six through month twelve) | Aswath Damodaran, Jay Ritter, Renaissance Capital | `lenses/post-ipo-window-lens.md` |
 | Derivative income (covered-call ETFs, equity-linked-note funds such as JEPI, autocallable funds such as ARKY) | Morningstar derivative-income analysts, Hamilton Reiner, Matt Kaufman | `lenses/derivative-income-lens.md` |
+| Tax overlay (applies to every recommendation from the five above) | Robert Green, Bruce Brumberg, Michael Kitces | `lenses/tax-overlay-lens.md` |
+
+The tax overlay is not optional and not a separate deliverable. Every
+recommendation produced under any of the five domain lenses ends with a
+tax hand-off line from the overlay: the after-tax character of the
+expected result and the single most important tax action or election.
 
 When a trade is a stock view expressed through options, use both: Worth for
 the directional and timing read, Sosnoff for the structure and mechanics.
@@ -256,11 +262,67 @@ Before giving a recommendation on a derivative-income product:
   buries the barrier or the NAV path, say so. Never quote a distribution
   rate as if it were a yield or a return.
 
+## Tax overlay: Green, Brumberg, and Kitces are the experts
+
+Whenever any of the five domain lenses produces a recommendation (a trade,
+a position change, a round to join, a lock-up plan, an income product to
+hold), run the tax overlay on it before delivering. The full framework
+lives in `lenses/tax-overlay-lens.md`; read it before doing this work.
+Robert Green covers trading taxation (options, stocks, derivative-income
+products), Bruce Brumberg covers equity compensation and private-to-public
+taxation (QSBS, 83(b), ISOs, lock-ups, 10b5-1), and Michael Kitces covers
+portfolio-level planning (asset location, harvesting, concentrated
+positions).
+
+### Retrieval protocol (required, not optional)
+
+Before delivering the tax hand-off line:
+
+1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
+   material on the specific tax question the recommendation raises. Use
+   two or three queries, choosing the source by the lens in play:
+   - Options, stocks, derivative income: `GreenTraderTax <topic> <current year>`
+     (Section 1256, wash sale options, Section 475, straddle, ETF tax
+     character) and `<ticker> 19a notice return of capital`.
+   - Private and post-IPO: `myStockOptions <topic> <current year>` and
+     `QSBS Section 1202 <current year>` (tiered holding period, $15M cap,
+     $75M test, Section 1045), `10b5-1 lock-up <company> <current year>`.
+   - Portfolio placement: `Kitces <topic>` (asset location, harvesting
+     gains, net investment income tax, tax-aware long-short).
+2. Prefer primary sources: GreenTraderTax posts and the current Trader Tax
+   Guide, myStockOptions.com Tax Center, Kitces's Nerd's Eye View, IRS
+   forms and instructions (6781, 8949, 1099-DIV, Form 8937), the fund's
+   own 19a notices, and the company's S-1 for lock-up terms.
+3. Note the publish date of what you found. Tax rules change by year; if
+   the newest source is from a prior tax year, say so and flag which rules
+   may have moved.
+4. Cite what you used. Distinguish "statute or IRS guidance," "practitioner
+   interpretation," and "issuer estimate" (a 19a notice is an estimate).
+5. State the limit. The overlay produces questions for a CPA, not tax
+   advice. Say so in the hand-off line when no professional has reviewed
+   the position.
+
+### Output shape for the tax hand-off
+
+- One or two sentences appended to the domain recommendation: the tax
+  character of the expected gain, loss, or distribution, and the single
+  most important tax action (an election, a holding-period date, an
+  account choice, a lot choice, a plan to file).
+- When the tax answer changes the recommendation (a sale that should wait
+  for long-term treatment, a product that belongs in an IRA, a QSBS clock
+  that has weeks to run), say so plainly and put the tax reason first.
+- For a full tax analysis rather than a hand-off line, follow the
+  seven-step procedure in the lens file and use its tax-map table for the
+  lens in play.
+- Never quote a distribution rate as income, never call return of capital
+  tax-free, and never state a QSBS exclusion without the issuance date and
+  which regime (pre- or post-July 4, 2025) applies.
+
 ## Scope
 
 These defaults apply to public stock trading, options trading, late-stage
 private or pre-IPO work, the first year of post-IPO trading, and packaged
-derivative-income products. Buyout-style private equity, early-stage
+derivative-income products, each with the tax overlay applied. Buyout-style private equity, early-stage
 venture (seed through Series C), dividend-stock investing, and other
 investment analysis in this repo are not governed by any of the five
 lenses.
