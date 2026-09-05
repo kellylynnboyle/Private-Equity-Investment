@@ -67,7 +67,7 @@ Replace angle-bracket terms. Use the current month and year.
 | --- | --- | --- | --- |
 | 1 | `Tom Sosnoff <underlying or theme> <month year>`; `tastylive market measures <topic>`; `tastytrade <strategy> <year>` | `GreenTraderTax <Section 1256 / wash sale options / Section 475 / straddle> <year>` | None |
 | 2 | `Carter Worth <ticker or sector> <month year>`; `Worth Charting <150-day / breakout / relative strength>`; `Carter Worth CNBC Fast Money <month year>` | `Kitces <harvesting gains / tax-loss harvesting / asset location / net investment income tax>` | 10-K, 10-Q, 8-K for the name; 13F-HR for Altimeter, Atreides, or ARK to check whether a call matches their positioning; Form 4 for insider sales |
-| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` | Form D for each round (size, date, issuer CIK); N-PORT and N-CSR for ARK Venture Fund's own quarterly marks; S-1 or 424B4 once public. Confidential draft registrations are not on EDGAR until 15 days before the roadshow |
+| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` | Form D for each round (size, date, issuer CIK), noting that many late-stage issuers rely on Section 4(a)(2) and file none; a full-text search on the company name across all forms finds public holders' N-PORT marks (T. Rowe Price, First Trust, ARK Venture) and customers' or partners' 6-K, 8-K, and 10-K mentions, which are the best filing-grade evidence on a private company; S-1 or 424B4 once public. Confidential draft registrations are not on EDGAR until 15 days before the roadshow |
 | 4 | `Damodaran <company> valuation <year>`; `Ritter IPO long-run returns <year>`; `<company> lock-up expiration date shares`; `Renaissance IPO ETF holdings <month year>` | `Kristin McKenna <company> lockup <year>`; `Darrow Wealth <10b5-1 / RSU / concentrated stock> <year>` | S-1 and 424B4 for lock-up terms and share counts; 10-Q for the first public quarters; Form 4 and 144 for insider sales after release; 13F-HR for who holds it |
 | 5 | `Morningstar <ticker> analysis <year>`; `JEPI fact sheet <month year>`; `Calamos CAIE autocallable dashboard`; `<ticker> holdings <month year>` | `Christine Benz tax-efficient <fund type> <year>`; `<ticker> 19a notice return of capital`; `<ticker> Form 8937` | N-1A or 485BPOS (prospectus: barriers, counterparties, fee); N-PORT (holdings); N-CSR (annual report, distribution character). Registrant is the trust (for example ARK ETF Trust), not the ticker |
 
@@ -88,7 +88,9 @@ Verified working through `mcp__Parallel_Search__web_fetch` on 2026-09-05.
 4. Cite the form type, filer, and file date in the analysis.
 
 Known limits (2026-09-05): the full-text search JSON and NPORT-EX and
-other HTML primary documents open through `web_fetch`. Raw 13F-HR XML
+other HTML primary documents open through `web_fetch`, but sec.gov
+document fetches fail intermittently with a network error; retry the same
+URLs once before treating the document as unreachable. Raw 13F-HR XML
 info tables and their stylesheet-rendered versions do not, and direct
 `curl` to sec.gov is blocked by the environment's network policy. For
 13F holdings, use the EDGAR search result for the filer, accession, and
