@@ -25,7 +25,7 @@ run them inside the same pass.
 1. **Route.** Pick the lens or lenses from the table. Read the lens file
    and the tax lens file before analyzing.
 2. **Retrieve once.** Make one Parallel Search call
-   (`mcp__Parallel_Search__web_search`) with four to six queries: two or
+   (`mcp__Parallel_Search__web_search`) with four or five queries (the API caps a call at five): two or
    three from the domain row and one or two from the tax row of the query
    table below. Add a second call only if the first returns nothing newer
    than about 90 days or the trade raises a question the first did not
