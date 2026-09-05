@@ -32,6 +32,13 @@ run them inside the same pass.
    cover. Prefer primary sources (the expert's own publication, the fund's
    own documents, the filing, the IRS form). Third-party summaries are
    corroboration only.
+   **Filing lookup.** For any lens 3, 4, or 5 question, and for lens 2
+   when positioning or insider activity matters, also make one
+   `mcp__Parallel_Search__web_fetch` call against SEC EDGAR using the
+   filing column of the query table. Marketplace prices, press releases,
+   and fund marketing pages are not filings; when a filing exists, the
+   filing number wins over the web number and the analysis says which
+   filing it came from.
 3. **Date-check.** Note the newest publish date found. If it is older than
    about 90 days, say so and fall back to the lens file. Tax rules move by
    year: if the newest tax source is from a prior tax year, flag it.
@@ -46,7 +53,9 @@ run them inside the same pass.
    answer changes the recommendation, put the tax reason first. If no CPA
    has reviewed the position, say so.
 6. **Label.** Cite what was used. Mark each claim as framework rule, base
-   rate, current commentary, issuer claim, or statute and IRS guidance.
+   rate, current commentary, issuer claim, filing, or statute and IRS
+   guidance. A marketplace indication (Forge, Hiive) is never labeled as a
+   filing or a price.
    State position bias: fund managers and issuers describe their own
    products; academics and Morningstar analysts hold no positions.
 
@@ -54,13 +63,29 @@ run them inside the same pass.
 
 Replace angle-bracket terms. Use the current month and year.
 
-| # | Domain queries | Tax queries |
-| --- | --- | --- |
-| 1 | `Tom Sosnoff <underlying or theme> <month year>`; `tastylive market measures <topic>`; `tastytrade <strategy> <year>` | `GreenTraderTax <Section 1256 / wash sale options / Section 475 / straddle> <year>` |
-| 2 | `Carter Worth <ticker or sector> <month year>`; `Worth Charting <150-day / breakout / relative strength>`; `Carter Worth CNBC Fast Money <month year>` | `Kitces <harvesting gains / tax-loss harvesting / asset location / net investment income tax>` |
-| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` |
-| 4 | `Damodaran <company> valuation <year>`; `Ritter IPO long-run returns <year>`; `<company> lock-up expiration date shares`; `Renaissance IPO ETF holdings <month year>` | `Kristin McKenna <company> lockup <year>`; `Darrow Wealth <10b5-1 / RSU / concentrated stock> <year>` |
-| 5 | `Morningstar <ticker> analysis <year>`; `JEPI fact sheet <month year>`; `Calamos CAIE autocallable dashboard`; `<ticker> holdings <month year>` | `Christine Benz tax-efficient <fund type> <year>`; `<ticker> 19a notice return of capital`; `<ticker> Form 8937` |
+| # | Domain queries | Tax queries | Filings (EDGAR) |
+| --- | --- | --- | --- |
+| 1 | `Tom Sosnoff <underlying or theme> <month year>`; `tastylive market measures <topic>`; `tastytrade <strategy> <year>` | `GreenTraderTax <Section 1256 / wash sale options / Section 475 / straddle> <year>` | None |
+| 2 | `Carter Worth <ticker or sector> <month year>`; `Worth Charting <150-day / breakout / relative strength>`; `Carter Worth CNBC Fast Money <month year>` | `Kitces <harvesting gains / tax-loss harvesting / asset location / net investment income tax>` | 10-K, 10-Q, 8-K for the name; 13F-HR for Altimeter, Atreides, or ARK to check whether a call matches their positioning; Form 4 for insider sales |
+| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` | Form D for each round (size, date, issuer CIK); N-PORT and N-CSR for ARK Venture Fund's own quarterly marks; S-1 or 424B4 once public. Confidential draft registrations are not on EDGAR until 15 days before the roadshow |
+| 4 | `Damodaran <company> valuation <year>`; `Ritter IPO long-run returns <year>`; `<company> lock-up expiration date shares`; `Renaissance IPO ETF holdings <month year>` | `Kristin McKenna <company> lockup <year>`; `Darrow Wealth <10b5-1 / RSU / concentrated stock> <year>` | S-1 and 424B4 for lock-up terms and share counts; 10-Q for the first public quarters; Form 4 and 144 for insider sales after release; 13F-HR for who holds it |
+| 5 | `Morningstar <ticker> analysis <year>`; `JEPI fact sheet <month year>`; `Calamos CAIE autocallable dashboard`; `<ticker> holdings <month year>` | `Christine Benz tax-efficient <fund type> <year>`; `<ticker> 19a notice return of capital`; `<ticker> Form 8937` | N-1A or 485BPOS (prospectus: barriers, counterparties, fee); N-PORT (holdings); N-CSR (annual report, distribution character). Registrant is the trust (for example ARK ETF Trust), not the ticker |
+
+### EDGAR lookup pattern
+
+Verified working through `mcp__Parallel_Search__web_fetch` on 2026-09-05.
+
+1. Full-text search to find the filer and accession number:
+   `https://efts.sec.gov/LATEST/search-index?q=%22<exact phrase>%22&forms=<FORM>`
+   Optional date bounds: `&dateRange=custom&startdt=YYYY-MM-DD&enddt=YYYY-MM-DD`.
+   The JSON response lists `display_names` with the CIK, `file_date`, and
+   `adsh` (accession number).
+2. Browse a known filer by CIK (name-based browse is unreliable):
+   `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=<cik>&type=<FORM>&count=20`
+3. Open the document:
+   `https://www.sec.gov/Archives/edgar/data/<cik>/<adsh without dashes>/`
+   and pick the primary document from the index.
+4. Cite the form type, filer, and file date in the analysis.
 
 ## Pairings and handoffs
 
