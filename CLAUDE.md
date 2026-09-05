@@ -1,328 +1,105 @@
 # Project guidance for Claude
 
-Five domain lenses and one overlay lens are in force. Each has a required
-retrieval step: never run on framework memory alone.
+Five domain lenses, each with its own tax expert, and one routine. Never
+run on framework memory alone: every recommendation is preceded by a
+retrieval step and ends with a tax hand-off line.
 
-| Work | Default lens | Framework file |
+## Routing table
+
+| # | Trigger | Domain experts | Tax expert | Lens file |
+| --- | --- | --- | --- | --- |
+| 1 | Options trade: structure, sizing, management | Tom Sosnoff / tastytrade | Robert Green (GreenTraderTax) | `lenses/sosnoff-options-lens.md` |
+| 2 | Public stock: single name, sector, ETF, index direction; any stock past its first IPO anniversary | Carter Worth / Worth Charting | Michael Kitces (Nerd's Eye View) | `lenses/worth-equity-lens.md` |
+| 3 | Late-stage private: Series D and later, secondaries, tender offers, pre-IPO rounds, IPO underwriting | Brad Gerstner, Gavin Baker, Cathie Wood | Bruce Brumberg (myStockOptions.com) | `lenses/late-stage-private-lens.md` |
+| 4 | Post-IPO window: listing through month twelve, lock-up expiry at the center | Aswath Damodaran, Jay Ritter, Renaissance Capital | Kristin McKenna (Darrow Wealth Management) | `lenses/post-ipo-window-lens.md` |
+| 5 | Derivative income: covered-call ETFs, ELN funds such as JEPI, autocallable funds such as ARKY and CAIE | Morningstar derivative-income analysts, Hamilton Reiner, Matt Kaufman | Christine Benz (Morningstar) | `lenses/derivative-income-lens.md` |
+
+The tax framework shared by all five tax experts, including the tax map by
+lens and the seven-step full analysis, is `lenses/tax-overlay-lens.md`.
+
+## The routine
+
+One pass per task. Do not repeat steps per lens; when two lenses apply,
+run them inside the same pass.
+
+1. **Route.** Pick the lens or lenses from the table. Read the lens file
+   and the tax lens file before analyzing.
+2. **Retrieve once.** Make one Parallel Search call
+   (`mcp__Parallel_Search__web_search`) with four to six queries: two or
+   three from the domain row and one or two from the tax row of the query
+   table below. Add a second call only if the first returns nothing newer
+   than about 90 days or the trade raises a question the first did not
+   cover. Prefer primary sources (the expert's own publication, the fund's
+   own documents, the filing, the IRS form). Third-party summaries are
+   corroboration only.
+3. **Date-check.** Note the newest publish date found. If it is older than
+   about 90 days, say so and fall back to the lens file. Tax rules move by
+   year: if the newest tax source is from a prior tax year, flag it.
+4. **Analyze** in the order given by the lens file's "How to run" section.
+   State the mechanical rule first, then any current commentary that
+   adjusts it, each with source and date.
+5. **Deliver.** Lead with the lens read. Flag any violation of a core
+   mechanic plainly; do not rationalize it. Other lenses and fundamentals
+   go in a secondary section, never as the default. End with the tax
+   hand-off: one or two sentences giving the tax character of the expected
+   result and the single most important tax action or election. If the tax
+   answer changes the recommendation, put the tax reason first. If no CPA
+   has reviewed the position, say so.
+6. **Label.** Cite what was used. Mark each claim as framework rule, base
+   rate, current commentary, issuer claim, or statute and IRS guidance.
+   State position bias: fund managers and issuers describe their own
+   products; academics and Morningstar analysts hold no positions.
+
+## Query table
+
+Replace angle-bracket terms. Use the current month and year.
+
+| # | Domain queries | Tax queries |
 | --- | --- | --- |
-| Public stock trading (single names, sectors, ETFs, index direction) | Carter Worth / Worth Charting | `lenses/worth-equity-lens.md` |
-| Options trades (structure, sizing, management) | Tom Sosnoff / tastytrade | `lenses/sosnoff-options-lens.md` |
-| Late-stage private and pre-IPO (Series D and later, secondaries, pre-IPO rounds, IPO underwriting) | Brad Gerstner, Gavin Baker, Cathie Wood | `lenses/late-stage-private-lens.md` |
-| Post-IPO window (lock-up expiry at about month six through month twelve) | Aswath Damodaran, Jay Ritter, Renaissance Capital | `lenses/post-ipo-window-lens.md` |
-| Derivative income (covered-call ETFs, equity-linked-note funds such as JEPI, autocallable funds such as ARKY) | Morningstar derivative-income analysts, Hamilton Reiner, Matt Kaufman | `lenses/derivative-income-lens.md` |
-| Tax overlay (applies to every recommendation from the five above) | Robert Green, Bruce Brumberg, Michael Kitces | `lenses/tax-overlay-lens.md` |
+| 1 | `Tom Sosnoff <underlying or theme> <month year>`; `tastylive market measures <topic>`; `tastytrade <strategy> <year>` | `GreenTraderTax <Section 1256 / wash sale options / Section 475 / straddle> <year>` |
+| 2 | `Carter Worth <ticker or sector> <month year>`; `Worth Charting <150-day / breakout / relative strength>`; `Carter Worth CNBC Fast Money <month year>` | `Kitces <harvesting gains / tax-loss harvesting / asset location / net investment income tax>` |
+| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` |
+| 4 | `Damodaran <company> valuation <year>`; `Ritter IPO long-run returns <year>`; `<company> lock-up expiration date shares`; `Renaissance IPO ETF holdings <month year>` | `Kristin McKenna <company> lockup <year>`; `Darrow Wealth <10b5-1 / RSU / concentrated stock> <year>` |
+| 5 | `Morningstar <ticker> analysis <year>`; `JEPI fact sheet <month year>`; `Calamos CAIE autocallable dashboard`; `<ticker> holdings <month year>` | `Christine Benz tax-efficient <fund type> <year>`; `<ticker> 19a notice return of capital`; `<ticker> Form 8937` |
 
-The tax overlay is not optional and not a separate deliverable. Every
-recommendation produced under any of the five domain lenses ends with a
-tax hand-off line from the overlay: the after-tax character of the
-expected result and the single most important tax action or election.
+## Pairings and handoffs
 
-When a trade is a stock view expressed through options, use both: Worth for
-the directional and timing read, Sosnoff for the structure and mechanics.
+- **Stock view expressed through options:** Worth for direction and timing,
+  Sosnoff for structure and mechanics. Tax: Green for the option leg,
+  Kitces for the stock leg.
+- **Derivative-income product on a name or index:** Worth says when to
+  commit or trim; the derivative-income lens says whether the product pays
+  enough for the risk it sells; Sosnoff when the analysis reaches the
+  option mechanics inside the product. Tax: Benz for placement and
+  character, Green if the fund passes through Section 1256 or straddle
+  issues.
+- **Lifecycle of a company going public:** lens 3 through pricing and the
+  first day of trading; lens 4 from listing through month twelve, and the
+  sole default until about month seven because the Worth lens's 150-day
+  moving average does not exist yet; lens 2 joins once roughly 150 trading
+  days exist and is the sole default after the first anniversary. Tax:
+  Brumberg through the IPO, McKenna through the lock-up and first year,
+  Kitces after that.
+- **Two tax experts in one task:** each answers for their own leg. Kitces
+  resolves account placement and year placement across legs.
 
-The derivative-income lens runs alongside the Worth lens: Worth says when
-to commit or trim capital in a name or index, and the derivative-income
-lens says whether a packaged income product on that exposure is paying
-enough for the risk it sells. When the analysis reaches the option
-mechanics inside such a product (strike distance, barrier, tenor, what
-cannot be managed), bring in the Sosnoff lens.
+## Hard rules
 
-Lifecycle handoffs for a company that goes public:
-
-1. Private lens through the IPO pricing and the first day of trading.
-2. Post-IPO window lens from listing through month twelve, with the
-   lock-up expiry as its centerpiece. It is the sole default from listing
-   to about month seven, because the Worth lens's 150-day moving average
-   does not exist yet.
-3. Worth lens joins once roughly 150 trading days exist (about month seven
-   or eight) and becomes the sole default after the first anniversary.
-
-## Post-IPO window analysis: Damodaran, Ritter, and Renaissance are the experts
-
-Whenever we are working a stock inside its first twelve months of public
-trading (a lock-up expiry, the first public earnings, an index inclusion,
-or a decision to buy, add, trim, or short a recent IPO), analyze it
-through the Damodaran, Ritter, and Renaissance lens by default. The full
-framework lives in `lenses/post-ipo-window-lens.md`; read it before doing
-this work.
-
-### Retrieval protocol (required, not optional)
-
-Before giving a recommendation on a stock in its first year of trading:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   material on the name and the cohort. Use two or three queries per
-   source, for example:
-   - `Damodaran <company> valuation <current year>` and
-     `Musings on Markets <company or theme>`
-   - `Ritter IPO long-run returns <current year>` and
-     `<company> lock-up expiration date shares`
-   - `Renaissance Capital <company> IPO aftermarket` and
-     `Renaissance IPO ETF holdings <current month year>`
-2. Prefer primary sources: Damodaran's blog and spreadsheets, Ritter's
-   University of Florida data pages, Renaissance Capital's IPO Center, ETF
-   holdings, and research, and the company's own S-1 and 10-Q filings for
-   lock-up terms and reported numbers.
-3. Note the publish date of what you found. If nothing is more recent than
-   about 90 days, say so explicitly and fall back to the framework document.
-4. Cite what you used. Distinguish "framework rule," "base rate," and
-   "current view," and name which source holds it.
-
-### Output shape for a post-IPO window analysis
-
-- Lead with the calendar: lock-up expiry date and share count, holder mix,
-  index inclusion dates, and the earnings dates inside the window.
-- Give the Ritter prior: where the name sits in the base-rate table by
-  size, profitability, sector, and float, and the expected drag.
-- Run the Damodaran re-valuation: the IPO-time story and six variables,
-  updated for the quarters reported since listing, and whether the numbers
-  confirmed or broke the story.
-- Run the Renaissance supply check: who is unlocking, whether they are
-  motivated sellers, the float after expiry, and how comparable recent
-  IPOs traded through their own expiry.
-- Close with the verdict, investor or trader framing, position size, and
-  the planned handoff to the Worth lens.
-- Flag stale narratives. If the stock still trades on the IPO story after
-  the numbers have contradicted it, say so. Do not quietly carry the
-  roadshow narrative forward.
-
-## Late-stage private analysis: Gerstner, Baker, and Wood are the experts
-
-Whenever we are working a late-stage private or pre-IPO position
-(evaluating a Series D or later round, a secondary, a pre-IPO allocation,
-an IPO, or a fund that holds such names), analyze it through the
-Gerstner, Baker, and Wood lens by default. The full framework lives in
-`lenses/late-stage-private-lens.md`; read it before doing this work.
-
-### Retrieval protocol (required, not optional)
-
-Before giving a late-stage private recommendation:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   commentary from all three on the name, sector, or the private market
-   broadly. Use two or three queries per expert, for example:
-   - `Brad Gerstner <company or theme> <current month year>` and
-     `BG2 pod <topic>`
-   - `Gavin Baker Atreides <company or theme> <current month year>`
-   - `Cathie Wood ARK Venture <company> <current month year>` and
-     `ARK Big Ideas <current year> <theme>`
-2. Prefer primary sources: BG2 Pod episodes, Invest Like the Best and
-   Capital Allocators interviews, ARK research and ARK Venture Fund
-   holdings disclosures, direct interviews in Business Insider or CNBC.
-   Third-party summaries are corroboration, not the source.
-3. Note the publish date of what you found. If nothing is more recent than
-   about 90 days, say so explicitly and fall back to the framework document.
-4. Cite what you used. Distinguish "framework rule" from "current view"
-   and name which of the three holds it. Where they disagree, say so.
-5. State position bias. All three are long most of what they discuss.
-
-### Output shape for a late-stage private analysis
-
-- Lead with the round and structure: stage, post-money, preference stack,
-  primary versus secondary, lock-up, and expected IPO window.
-- Run the three tests in order: Gerstner (AI-accelerated growth, real
-  revenue, capex-to-revenue math), Baker (LLCC risk score, position in the
-  physical stack, what falsifies the thesis), Wood (cost curve, five-year
-  TAM, public comps and existing fund exposure).
-- Give a sizing and exit plan: conviction-adjusted size, the panic-early or
-  double-down-late choice made in advance, post-IPO drawdown expectation.
-- Flag stale marks. Say whether the last-round price holds against current
-  public multiples. Do not quietly carry a mark that the public comps no
-  longer support.
-- Fundamentals, deal-specific legal terms, and other lenses are welcome as
-  a secondary section, never as the default.
-
-## Public stock analysis: Worth lens is the default
-
-Whenever we are working a public stock trade (screening a name, judging a
-sector, sizing a long or short, deciding whether to trim or add), analyze
-it through the Carter Worth lens by default. The full framework lives in
-`lenses/worth-equity-lens.md`; read it before doing equity trading work.
-
-### Retrieval protocol (required, not optional)
-
-Before giving a stock trading recommendation:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   Carter Worth commentary relevant to the name, sector, or index. Use two
-   or three queries, for example:
-   - `Carter Worth <ticker or sector> <current month year>`
-   - `Worth Charting <theme>` (e.g. 150-day, breakout, relative strength)
-   - `Carter Worth CNBC Fast Money <current month year>`
-2. Prefer primary sources: CNBC video pages and articles, Worth Charting
-   press pages, podcast appearances. The Quiver Quantitative CNBC tracker
-   is a useful index of his recent calls but should be corroborated.
-3. Note the publish date of what you found. If nothing is more recent than
-   about 90 days, say so explicitly and fall back to the framework document.
-4. Cite what you used. Distinguish "framework rule" from "current call" so
-   the reader can tell which is which.
-
-### Output shape for a stock analysis
-
-- Lead with the Worth read: price versus the 150-day moving average and
-  its slope, the long-term trendline or channel, volume confirmation,
-  relative strength versus the S&P 500, and any historical analog.
-- State the technical juncture first (breakout, extended, reversal at
-  support or resistance), then any current Worth call on the name or
-  sector, with a source and date.
-- Flag where the trade fights the chart (buying an extended name far above
-  its 150-day, shorting into a volume-confirmed breakout). Do not quietly
-  rationalize it with a fundamental story.
-- Fundamentals and other lenses are welcome as a secondary section, never
-  as the default.
-
-## Options analysis: Sosnoff lens is the default
-
-Whenever we are working an options trade (screening, structuring, sizing,
-managing, or reviewing a position), analyze it through the Tom Sosnoff /
-tastytrade lens by default. The full framework lives in
-`lenses/sosnoff-options-lens.md`; read it before doing options work.
-
-### Retrieval protocol (required, not optional)
-
-Do not run on framework memory alone. Before giving an options recommendation:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   tastytrade / tastylive / Sosnoff commentary relevant to the trade. Use two
-   or three queries, for example:
-   - `Tom Sosnoff <underlying or theme> <current month year>`
-   - `tastylive market measures <topic>` (e.g. strangles, IV rank, 21 DTE)
-   - `tastytrade <strategy> <current year>`
-2. Prefer primary sources: tastylive.com show pages and blog, tastylive
-   YouTube segments, Sosnoff interviews. Third-party summaries are fine for
-   corroboration but should not be the only source.
-3. Note the publish date of what you found. If nothing is more recent than
-   about 90 days, say so explicitly and fall back to the framework document.
-4. Cite what you used. In the analysis, distinguish "framework rule" from
-   "current commentary" so the reader can tell which is which.
-
-### Output shape for an options analysis
-
-- Lead with the Sosnoff read: IV rank environment, duration, strike/delta,
-  size, and the management plan (profit target and 21 DTE rule).
-- State the mechanical rule first, then any current commentary that adjusts
-  it, with a source and date.
-- Flag where the trade violates a core mechanic (low IV rank, illiquid
-  underlying, oversized relative to buying power, undefined risk in a small
-  account). Do not quietly rationalize it.
-- Other lenses (a discretionary directional view, fundamentals, a different
-  options school) are welcome as a secondary section, never as the default.
-
-## Derivative income analysis: Morningstar, Reiner, and Kaufman are the experts
-
-Whenever we are working a passive-income product that manufactures yield
-from options or structured notes (a covered-call ETF, an equity-linked-note
-fund such as JEPI, an autocallable income ETF such as ARKY or CAIE, or any
-fund whose headline yield is a distribution rate), analyze it through the
-Morningstar, Reiner, and Kaufman lens by default. The full framework lives
-in `lenses/derivative-income-lens.md`; read it before doing this work.
-Dividend-growth and high-dividend stock investing are not covered by this
-lens.
-
-### Retrieval protocol (required, not optional)
-
-Before giving a recommendation on a derivative-income product:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   material on the product and its category. Use two or three queries per
-   source, for example:
-   - `Morningstar <ticker> analysis <current year>` and
-     `Morningstar derivative income ETF <current month year>`
-   - `JEPI fact sheet <current month year>` and
-     `Hamilton Reiner covered call <current year>`
-   - `Calamos CAIE autocallable dashboard` and
-     `Matt Kaufman autocallable ETF <current year>`
-   - `<ticker> 19a notice return of capital` and
-     `<ticker> holdings <current month year>`
-2. Prefer primary sources: the issuer's fund page, fact sheet, holdings,
-   19a notices and Form 8937, Morningstar analyst reports, and the
-   prospectus for barrier, strike, and counterparty terms.
-3. Note the publish date of what you found. If nothing is more recent than
-   about 90 days, say so explicitly and fall back to the framework document.
-4. Cite what you used. Distinguish "framework rule," "issuer claim," and
-   "independent analysis," and name which source holds it.
-5. State position bias. Issuers and portfolio managers are describing
-   their own products.
-
-### Output shape for a derivative-income analysis
-
-- Lead with the structure: covered call, ELN overwrite, or autocallable;
-  index or single stock; overwrite ratio or barrier levels; tenor;
-  counterparties.
-- Name the risk sold, and the reference asset's worst historical drawdown
-  against the strike or barrier.
-- Give total return since inception versus the reference asset and versus
-  JEPI or CAIE as the category benchmark, with the NAV path.
-- Give distribution character: return-of-capital share and its effect on
-  cost basis.
-- Close with the portfolio role (equity substitute with capped upside,
-  never a bond substitute), sizing against the equity sleeve, and the
-  Sosnoff cross-check on the option mechanics.
-- Flag distribution-rate marketing. If the pitch leads with the payout and
-  buries the barrier or the NAV path, say so. Never quote a distribution
-  rate as if it were a yield or a return.
-
-## Tax overlay: Green, Brumberg, and Kitces are the experts
-
-Whenever any of the five domain lenses produces a recommendation (a trade,
-a position change, a round to join, a lock-up plan, an income product to
-hold), run the tax overlay on it before delivering. The full framework
-lives in `lenses/tax-overlay-lens.md`; read it before doing this work.
-Robert Green covers trading taxation (options, stocks, derivative-income
-products), Bruce Brumberg covers equity compensation and private-to-public
-taxation (QSBS, 83(b), ISOs, lock-ups, 10b5-1), and Michael Kitces covers
-portfolio-level planning (asset location, harvesting, concentrated
-positions).
-
-### Retrieval protocol (required, not optional)
-
-Before delivering the tax hand-off line:
-
-1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
-   material on the specific tax question the recommendation raises. Use
-   two or three queries, choosing the source by the lens in play:
-   - Options, stocks, derivative income: `GreenTraderTax <topic> <current year>`
-     (Section 1256, wash sale options, Section 475, straddle, ETF tax
-     character) and `<ticker> 19a notice return of capital`.
-   - Private and post-IPO: `myStockOptions <topic> <current year>` and
-     `QSBS Section 1202 <current year>` (tiered holding period, $15M cap,
-     $75M test, Section 1045), `10b5-1 lock-up <company> <current year>`.
-   - Portfolio placement: `Kitces <topic>` (asset location, harvesting
-     gains, net investment income tax, tax-aware long-short).
-2. Prefer primary sources: GreenTraderTax posts and the current Trader Tax
-   Guide, myStockOptions.com Tax Center, Kitces's Nerd's Eye View, IRS
-   forms and instructions (6781, 8949, 1099-DIV, Form 8937), the fund's
-   own 19a notices, and the company's S-1 for lock-up terms.
-3. Note the publish date of what you found. Tax rules change by year; if
-   the newest source is from a prior tax year, say so and flag which rules
-   may have moved.
-4. Cite what you used. Distinguish "statute or IRS guidance," "practitioner
-   interpretation," and "issuer estimate" (a 19a notice is an estimate).
-5. State the limit. The overlay produces questions for a CPA, not tax
-   advice. Say so in the hand-off line when no professional has reviewed
-   the position.
-
-### Output shape for the tax hand-off
-
-- One or two sentences appended to the domain recommendation: the tax
-  character of the expected gain, loss, or distribution, and the single
-  most important tax action (an election, a holding-period date, an
-  account choice, a lot choice, a plan to file).
-- When the tax answer changes the recommendation (a sale that should wait
-  for long-term treatment, a product that belongs in an IRA, a QSBS clock
-  that has weeks to run), say so plainly and put the tax reason first.
-- For a full tax analysis rather than a hand-off line, follow the
-  seven-step procedure in the lens file and use its tax-map table for the
-  lens in play.
-- Never quote a distribution rate as income, never call return of capital
-  tax-free, and never state a QSBS exclusion without the issuance date and
-  which regime (pre- or post-July 4, 2025) applies.
+- Never quote a distribution rate as yield or return. Return of capital is
+  deferred tax, not no tax.
+- Never state a QSBS exclusion without the issuance date and which regime
+  applies (on or before July 4, 2025, or after).
+- Never carry a private mark or an IPO narrative that the public numbers no
+  longer support without saying so.
+- Never present a recommendation that violates a lens's core mechanic
+  (low IV rank, buying far above the 150-day, unproven barrier management,
+  oversized position) as if the mechanic did not exist.
+- The tax hand-off produces questions for a CPA, not tax advice.
 
 ## Scope
 
 These defaults apply to public stock trading, options trading, late-stage
 private or pre-IPO work, the first year of post-IPO trading, and packaged
-derivative-income products, each with the tax overlay applied. Buyout-style private equity, early-stage
+derivative-income products. Buyout-style private equity, early-stage
 venture (seed through Series C), dividend-stock investing, and other
-investment analysis in this repo are not governed by any of the five
-lenses.
+investment analysis in this repo are not governed by these lenses.

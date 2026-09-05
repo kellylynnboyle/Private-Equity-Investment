@@ -1,4 +1,4 @@
-# Tax Overlay Lens (Green, Brumberg, Kitces)
+# Tax Overlay Lens (Green, Kitces, Brumberg, McKenna, Benz)
 
 The sixth lens. It does not own a domain of its own; it runs on top of the
 other five and asks, for every recommendation they produce, what the
@@ -8,23 +8,25 @@ retrieval protocol in `CLAUDE.md` rather than treating this file as the
 final word. Nothing here is tax advice; it is a checklist for the
 questions to put to a CPA.
 
-## Who
+## Who: one tax expert per domain lens
 
-| Expert | Covers | Why |
+| Lens | Tax expert | Why |
 | --- | --- | --- |
-| Robert A. Green, CPA (GreenTraderTax) | Options, stock trading, derivative-income products | The recognized authority on trader taxation. Green's 2026 Trader Tax Guide (157 pages, 18 chapters) was rewritten for the One Big Beautiful Bill Act and covers Section 1256, wash sales on options, straddles, constructive sales, trader tax status, the Section 475 election, and the tax character of ETFs, ETNs, and volatility products. Publishes continuously; latest compliance post August 17, 2026. |
-| Bruce Brumberg (myStockOptions.com) | Late-stage private, pre-IPO, post-IPO | Editor-in-chief of the standard reference on equity compensation taxation: ISOs, NSOs, RSUs, 83(b), AMT, QSBS, tender offers, lock-ups, 10b5-1 plans. Running an IPO Readiness Summit for advisors on September 24, 2026 aimed at SpaceX, OpenAI, Anthropic, Anduril, and Databricks holders. |
-| Michael Kitces (Nerd's Eye View) | Portfolio-level planning across all five | Asset location, harvesting losses versus harvesting gains across the four long-term capital gains brackets, the 3.8 percent net investment income tax, and concentrated-position strategies such as tax-aware long-short. Weekly publication; June 17, 2026 piece on tax-aware long-short for concentrated founder and IPO stock. |
+| 1. Sosnoff options | Robert A. Green, CPA (GreenTraderTax) | The recognized authority on trader taxation. Green's 2026 Trader Tax Guide (157 pages, 18 chapters) was rewritten for the One Big Beautiful Bill Act and covers Section 1256, wash sales on options, straddles, constructive sales, trader tax status, the Section 475 election, and the tax character of ETFs, ETNs, and volatility products. Latest compliance post August 17, 2026. |
+| 2. Worth equity | Michael Kitces (Nerd's Eye View) | Investor-side equity taxation: harvesting losses versus harvesting gains across the four long-term capital gains brackets, the 3.8 percent net investment income tax, asset location, and concentrated-position strategies such as tax-aware long-short (June 17, 2026). Weekly publication; also the tie-breaker on account and year placement when two lenses apply. |
+| 3. Late-stage private | Bruce Brumberg (myStockOptions.com) | Editor-in-chief of the standard reference on equity compensation taxation: ISOs, NSOs, RSUs, 83(b), AMT, QSBS and Section 1045 rollovers, tender offers. Running an IPO Readiness Summit on September 24, 2026 aimed at SpaceX, OpenAI, Anthropic, Anduril, and Databricks holders. |
+| 4. Post-IPO window | Kristin McKenna, CFP (Darrow Wealth Management, Forbes senior contributor) | Specialist in sudden-wealth and post-IPO planning: lock-up release sales strategy, 10b5-1 plans (October 2025), RSU taxation (March 2026), concentrated-stock diversification, AMT credit use. Published the SpaceX employee lock-up release schedule on May 21, 2026, noting the staggered early-release program inside the 180-day lock-up. |
+| 5. Derivative income | Christine Benz (Morningstar, director of personal finance) | Tax-efficient fund selection and placement: which distributions are ordinary, qualified, or return of capital, tax-cost ratios, and which account each fund belongs in. Publishes tax-efficient model portfolios (latest September 3, 2026) and the annual tax-efficient fund picks (June 10, 2026). |
 
 ## Tax map by lens
 
 | Lens | Main tax questions | Owner |
 | --- | --- | --- |
-| Sosnoff options | Is the contract a Section 1256 contract (broad-based index options, futures, options on futures: 60/40, marked to market, no wash sale, three-year loss carryback) or an equity option (short-term capital, wash sales between the stock and its options, straddle and constructive-sale rules)? Does the trader qualify for trader tax status, and is a Section 475 election worth it? | Green |
-| Worth equity | Lot selection, holding period to long-term, wash-sale coordination with any options on the same name, harvest losses versus harvest gains given the bracket, state tax. | Green, Kitces |
-| Late-stage private | QSBS under Section 1202: original issuance from a domestic C corporation, gross-asset test at issuance, active business test, holding period, per-issuer cap. 83(b) elections, ISO exercise and AMT, secondary purchases (which do not qualify for QSBS), Section 1045 rollovers, interval-fund reporting (ARK Venture Fund reports on a 1099, not a K-1). | Brumberg |
-| Post-IPO window | Lock-up release into a 10b5-1 plan, double-trigger RSU vesting at IPO and withholding shortfalls, whether the QSBS clock has run, calendar-year placement of the sale, state residency, concentrated-position strategies. | Brumberg, Kitces |
-| Derivative income | Character of the distribution: ordinary income (ELN-based funds such as JEPI, about 80 to 85 percent of the payout), Section 1256 60/40 passed through (index-option funds such as SPYI and QQQI), or return of capital (autocallable funds such as CAIE and ARKY, most NEOS funds). Basis reduction from return of capital and the zero-basis point. Asset location: ordinary-income payers belong in tax-advantaged accounts. | Green, Kitces |
+| 1. Sosnoff options | Is the contract a Section 1256 contract (broad-based index options, futures, options on futures: 60/40, marked to market, no wash sale, three-year loss carryback) or an equity option (short-term capital, wash sales between the stock and its options, straddle and constructive-sale rules)? Does the trader qualify for trader tax status, and is a Section 475 election worth it? | Green |
+| 2. Worth equity | Lot selection, holding period to long-term, wash-sale coordination with any options on the same name, harvest losses versus harvest gains given the bracket, state tax. | Kitces (Green if trader tax status is in play) |
+| 3. Late-stage private | QSBS under Section 1202: original issuance from a domestic C corporation, gross-asset test at issuance, active business test, holding period, per-issuer cap. 83(b) elections, ISO exercise and AMT, secondary purchases (which do not qualify for QSBS), Section 1045 rollovers, interval-fund reporting (ARK Venture Fund reports on a 1099, not a K-1). | Brumberg |
+| 4. Post-IPO window | Lock-up release into a 10b5-1 plan, staggered early-release windows, double-trigger RSU vesting at IPO and withholding shortfalls, whether the QSBS clock has run, calendar-year placement of the sale, state residency, concentrated-position strategies. | McKenna (Brumberg for QSBS carried from the private stage) |
+| 5. Derivative income | Character of the distribution: ordinary income (ELN-based funds such as JEPI, about 80 to 85 percent of the payout), Section 1256 60/40 passed through (index-option funds such as SPYI and QQQI), or return of capital (autocallable funds such as CAIE and ARKY, most NEOS funds). Basis reduction from return of capital and the zero-basis point. Asset location: ordinary-income payers belong in tax-advantaged accounts. | Benz (Green for Section 1256 pass-through and straddle questions) |
 
 ## Core rules
 
@@ -83,9 +85,10 @@ questions to put to a CPA.
    after-tax result of the recommended action against the next-best
    alternative.
 7. Hand-off line. Every recommendation from lenses one through five ends
-   with one or two sentences from this lens stating the after-tax
-   character and the single most important tax action. If no CPA has
-   reviewed it, say so.
+   with one or two sentences from that lens's tax expert stating the
+   after-tax character and the single most important tax action. When two
+   lenses apply, each tax expert answers for their own leg and Kitces
+   resolves account and year placement. If no CPA has reviewed it, say so.
 
 ## Current snapshot (as of 2026-09-05)
 
@@ -111,10 +114,18 @@ questions to put to a CPA.
   capital. Calamos said on July 30, 2026 that CAIE and CAIQ distributions
   are expected to be mostly return of capital; ARKY, launched August 19,
   2026, reports on a 1099 and has no distribution history yet.
-- Post-IPO planning: the SpaceX lock-up window opens around mid-December
-  2026, which straddles the 2026 and 2027 tax years. myStockOptions.com
-  is running its IPO Readiness Summit on September 24, 2026 covering
-  QSBS, double-trigger RSUs, 10b5-1 plans, and lock-up releases.
+- Post-IPO planning: SpaceX is running a staggered early-release program
+  inside its 180-day lock-up, so employees get several selling windows
+  before the full release around mid-December 2026 (McKenna, May 21,
+  2026). The full release straddles the 2026 and 2027 tax years.
+  myStockOptions.com is running its IPO Readiness Summit on September 24,
+  2026 covering QSBS, double-trigger RSUs, 10b5-1 plans, and lock-up
+  releases.
+- Fund placement: Benz's tax-efficient retirement-saver portfolios
+  (September 3, 2026) and tax-efficient fund picks (June 10, 2026) are
+  the current reference for which fund types belong in taxable versus
+  tax-advantaged accounts; ordinary-income payers such as ELN funds and
+  taxable bond funds go in sheltered accounts.
 - Concentrated positions: Kitces (June 17, 2026) covered tax-aware
   long-short as a way to generate offsetting losses against founder and
   IPO stock gains; AQR reports about $70B in such strategies. It requires
@@ -139,6 +150,13 @@ newest source found is older than about 90 days, say so in the analysis.
 - https://www.kitces.com/blog/harvesting-losses-or-harvesting-gains-planning-around-four-long-term-capital-gains-tax-rates/ (June 2, 2025)
 - https://www.kitces.com/kitces-iar-tax-ce-day-2026/
 - https://www.financial-planning.com/news/michael-kitces-managing-long-term-capital-gains-tax
+- https://darrowwealthmanagement.com/blog/spacex-ipo-employee-lockup-release-dates/ (McKenna, May 21, 2026)
+- https://darrowwealthmanagement.com/blog/10b5-1-trading-plans/ (McKenna, October 17, 2025)
+- https://darrowwealthmanagement.com/blog/restricted-stock-units (McKenna, March 12, 2026)
+- https://darrowwealthmanagement.com/stock-option-advisor (July 23, 2026)
+- https://www.morningstar.com/funds/25-top-picks-tax-efficient-etfs-mutual-funds (Benz, June 10, 2026)
+- https://www.morningstar.com/retirement/best-practices-tax-efficient-portfolio-management (Benz)
+- http://morningstar.com/people/christine-benz (articles through September 3, 2026)
 - https://legalclarity.org/is-jepi-tax-efficient-ordinary-income-tax-explained (June 8, 2026)
 - https://legalclarity.org/how-neos-etfs-spyi-qqqi-and-iwmi-achieve-tax-efficiency (June 8, 2026)
 - https://www.calamos.com/blogs/voices/beyond-the-coupon-how-to-evaluate-a-growing-autocallable-etf-category (July 30, 2026)
@@ -146,7 +164,8 @@ newest source found is older than about 90 days, say so in the analysis.
 
 ## Disclaimer
 
-Green, Brumberg, and Kitces publish education for traders, equity holders,
-and advisors; they are not this reader's CPA. Tax outcomes depend on
+Green, Kitces, Brumberg, McKenna, and Benz publish education for traders,
+equity holders, and advisors; McKenna also runs an advisory firm. None of
+them is this reader's CPA. Tax outcomes depend on
 facts, state, account type, and elections. This lens produces questions
 for a qualified tax professional, not answers to act on alone.
