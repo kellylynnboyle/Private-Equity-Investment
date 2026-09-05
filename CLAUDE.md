@@ -87,6 +87,16 @@ Verified working through `mcp__Parallel_Search__web_fetch` on 2026-09-05.
    and pick the primary document from the index.
 4. Cite the form type, filer, and file date in the analysis.
 
+Known limits (2026-09-05): the full-text search JSON and NPORT-EX and
+other HTML primary documents open through `web_fetch`. Raw 13F-HR XML
+info tables and their stylesheet-rendered versions do not, and direct
+`curl` to sec.gov is blocked by the environment's network policy. For
+13F holdings, use the EDGAR search result for the filer, accession, and
+file date, then take the position data from at least two independent
+13F parsers (13f.info, stockzoa, Dealroom's filing-matched notes) and
+label it "13F via aggregator, filing not opened." Never label aggregator
+data as the filing itself.
+
 ## Pairings and handoffs
 
 - **Stock view expressed through options:** Worth for direction and timing,
