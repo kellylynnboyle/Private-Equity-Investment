@@ -1,6 +1,6 @@
 # Project guidance for Claude
 
-Three default analytical lenses are in force. Each has a required
+Four default analytical lenses are in force. Each has a required
 retrieval step: never run on framework memory alone.
 
 | Work | Default lens | Framework file |
@@ -8,12 +8,69 @@ retrieval step: never run on framework memory alone.
 | Public stock trading (single names, sectors, ETFs, index direction) | Carter Worth / Worth Charting | `lenses/worth-equity-lens.md` |
 | Options trades (structure, sizing, management) | Tom Sosnoff / tastytrade | `lenses/sosnoff-options-lens.md` |
 | Late-stage private and pre-IPO (Series D and later, secondaries, pre-IPO rounds, IPO underwriting) | Brad Gerstner, Gavin Baker, Cathie Wood | `lenses/late-stage-private-lens.md` |
+| Post-IPO window (lock-up expiry at about month six through month twelve) | Aswath Damodaran, Jay Ritter, Renaissance Capital | `lenses/post-ipo-window-lens.md` |
 
 When a trade is a stock view expressed through options, use both: Worth for
 the directional and timing read, Sosnoff for the structure and mechanics.
-When a late-stage private name goes public, the private lens covers the
-IPO underwriting, lock-up, and sizing; Worth takes over for the chart once
-there is enough public trading history.
+
+Lifecycle handoffs for a company that goes public:
+
+1. Private lens through the IPO pricing and the first day of trading.
+2. Post-IPO window lens from listing through month twelve, with the
+   lock-up expiry as its centerpiece. It is the sole default from listing
+   to about month seven, because the Worth lens's 150-day moving average
+   does not exist yet.
+3. Worth lens joins once roughly 150 trading days exist (about month seven
+   or eight) and becomes the sole default after the first anniversary.
+
+## Post-IPO window analysis: Damodaran, Ritter, and Renaissance are the experts
+
+Whenever we are working a stock inside its first twelve months of public
+trading (a lock-up expiry, the first public earnings, an index inclusion,
+or a decision to buy, add, trim, or short a recent IPO), analyze it
+through the Damodaran, Ritter, and Renaissance lens by default. The full
+framework lives in `lenses/post-ipo-window-lens.md`; read it before doing
+this work.
+
+### Retrieval protocol (required, not optional)
+
+Before giving a recommendation on a stock in its first year of trading:
+
+1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
+   material on the name and the cohort. Use two or three queries per
+   source, for example:
+   - `Damodaran <company> valuation <current year>` and
+     `Musings on Markets <company or theme>`
+   - `Ritter IPO long-run returns <current year>` and
+     `<company> lock-up expiration date shares`
+   - `Renaissance Capital <company> IPO aftermarket` and
+     `Renaissance IPO ETF holdings <current month year>`
+2. Prefer primary sources: Damodaran's blog and spreadsheets, Ritter's
+   University of Florida data pages, Renaissance Capital's IPO Center, ETF
+   holdings, and research, and the company's own S-1 and 10-Q filings for
+   lock-up terms and reported numbers.
+3. Note the publish date of what you found. If nothing is more recent than
+   about 90 days, say so explicitly and fall back to the framework document.
+4. Cite what you used. Distinguish "framework rule," "base rate," and
+   "current view," and name which source holds it.
+
+### Output shape for a post-IPO window analysis
+
+- Lead with the calendar: lock-up expiry date and share count, holder mix,
+  index inclusion dates, and the earnings dates inside the window.
+- Give the Ritter prior: where the name sits in the base-rate table by
+  size, profitability, sector, and float, and the expected drag.
+- Run the Damodaran re-valuation: the IPO-time story and six variables,
+  updated for the quarters reported since listing, and whether the numbers
+  confirmed or broke the story.
+- Run the Renaissance supply check: who is unlocking, whether they are
+  motivated sellers, the float after expiry, and how comparable recent
+  IPOs traded through their own expiry.
+- Close with the verdict, investor or trader framing, position size, and
+  the planned handoff to the Worth lens.
+- Flag stale narratives. If the stock still trades on the IPO story after
+  the numbers have contradicted it, say so. Do not quietly carry the
+  roadshow narrative forward.
 
 ## Late-stage private analysis: Gerstner, Baker, and Wood are the experts
 
@@ -139,7 +196,8 @@ Do not run on framework memory alone. Before giving an options recommendation:
 
 ## Scope
 
-These defaults apply to public stock trading, options trading, and
-late-stage private or pre-IPO work. Buyout-style private equity, early-stage
-venture (seed through Series C), and other investment analysis in this repo
-are not governed by any of the three lenses.
+These defaults apply to public stock trading, options trading, late-stage
+private or pre-IPO work, and the first year of post-IPO trading.
+Buyout-style private equity, early-stage venture (seed through Series C),
+and other investment analysis in this repo are not governed by any of the
+four lenses.
