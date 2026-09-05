@@ -1,6 +1,6 @@
 # Project guidance for Claude
 
-Four default analytical lenses are in force. Each has a required
+Five default analytical lenses are in force. Each has a required
 retrieval step: never run on framework memory alone.
 
 | Work | Default lens | Framework file |
@@ -9,9 +9,17 @@ retrieval step: never run on framework memory alone.
 | Options trades (structure, sizing, management) | Tom Sosnoff / tastytrade | `lenses/sosnoff-options-lens.md` |
 | Late-stage private and pre-IPO (Series D and later, secondaries, pre-IPO rounds, IPO underwriting) | Brad Gerstner, Gavin Baker, Cathie Wood | `lenses/late-stage-private-lens.md` |
 | Post-IPO window (lock-up expiry at about month six through month twelve) | Aswath Damodaran, Jay Ritter, Renaissance Capital | `lenses/post-ipo-window-lens.md` |
+| Derivative income (covered-call ETFs, equity-linked-note funds such as JEPI, autocallable funds such as ARKY) | Morningstar derivative-income analysts, Hamilton Reiner, Matt Kaufman | `lenses/derivative-income-lens.md` |
 
 When a trade is a stock view expressed through options, use both: Worth for
 the directional and timing read, Sosnoff for the structure and mechanics.
+
+The derivative-income lens runs alongside the Worth lens: Worth says when
+to commit or trim capital in a name or index, and the derivative-income
+lens says whether a packaged income product on that exposure is paying
+enough for the risk it sells. When the analysis reaches the option
+mechanics inside such a product (strike distance, barrier, tenor, what
+cannot be managed), bring in the Sosnoff lens.
 
 Lifecycle handoffs for a company that goes public:
 
@@ -194,10 +202,65 @@ Do not run on framework memory alone. Before giving an options recommendation:
 - Other lenses (a discretionary directional view, fundamentals, a different
   options school) are welcome as a secondary section, never as the default.
 
+## Derivative income analysis: Morningstar, Reiner, and Kaufman are the experts
+
+Whenever we are working a passive-income product that manufactures yield
+from options or structured notes (a covered-call ETF, an equity-linked-note
+fund such as JEPI, an autocallable income ETF such as ARKY or CAIE, or any
+fund whose headline yield is a distribution rate), analyze it through the
+Morningstar, Reiner, and Kaufman lens by default. The full framework lives
+in `lenses/derivative-income-lens.md`; read it before doing this work.
+Dividend-growth and high-dividend stock investing are not covered by this
+lens.
+
+### Retrieval protocol (required, not optional)
+
+Before giving a recommendation on a derivative-income product:
+
+1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
+   material on the product and its category. Use two or three queries per
+   source, for example:
+   - `Morningstar <ticker> analysis <current year>` and
+     `Morningstar derivative income ETF <current month year>`
+   - `JEPI fact sheet <current month year>` and
+     `Hamilton Reiner covered call <current year>`
+   - `Calamos CAIE autocallable dashboard` and
+     `Matt Kaufman autocallable ETF <current year>`
+   - `<ticker> 19a notice return of capital` and
+     `<ticker> holdings <current month year>`
+2. Prefer primary sources: the issuer's fund page, fact sheet, holdings,
+   19a notices and Form 8937, Morningstar analyst reports, and the
+   prospectus for barrier, strike, and counterparty terms.
+3. Note the publish date of what you found. If nothing is more recent than
+   about 90 days, say so explicitly and fall back to the framework document.
+4. Cite what you used. Distinguish "framework rule," "issuer claim," and
+   "independent analysis," and name which source holds it.
+5. State position bias. Issuers and portfolio managers are describing
+   their own products.
+
+### Output shape for a derivative-income analysis
+
+- Lead with the structure: covered call, ELN overwrite, or autocallable;
+  index or single stock; overwrite ratio or barrier levels; tenor;
+  counterparties.
+- Name the risk sold, and the reference asset's worst historical drawdown
+  against the strike or barrier.
+- Give total return since inception versus the reference asset and versus
+  JEPI or CAIE as the category benchmark, with the NAV path.
+- Give distribution character: return-of-capital share and its effect on
+  cost basis.
+- Close with the portfolio role (equity substitute with capped upside,
+  never a bond substitute), sizing against the equity sleeve, and the
+  Sosnoff cross-check on the option mechanics.
+- Flag distribution-rate marketing. If the pitch leads with the payout and
+  buries the barrier or the NAV path, say so. Never quote a distribution
+  rate as if it were a yield or a return.
+
 ## Scope
 
 These defaults apply to public stock trading, options trading, late-stage
-private or pre-IPO work, and the first year of post-IPO trading.
-Buyout-style private equity, early-stage venture (seed through Series C),
-and other investment analysis in this repo are not governed by any of the
-four lenses.
+private or pre-IPO work, the first year of post-IPO trading, and packaged
+derivative-income products. Buyout-style private equity, early-stage
+venture (seed through Series C), dividend-stock investing, and other
+investment analysis in this repo are not governed by any of the five
+lenses.
