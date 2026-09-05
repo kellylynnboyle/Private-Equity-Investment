@@ -1,15 +1,65 @@
 # Project guidance for Claude
 
-Two default analytical lenses are in force. Each has a required retrieval
-step: never run on framework memory alone.
+Three default analytical lenses are in force. Each has a required
+retrieval step: never run on framework memory alone.
 
 | Work | Default lens | Framework file |
 | --- | --- | --- |
 | Public stock trading (single names, sectors, ETFs, index direction) | Carter Worth / Worth Charting | `lenses/worth-equity-lens.md` |
 | Options trades (structure, sizing, management) | Tom Sosnoff / tastytrade | `lenses/sosnoff-options-lens.md` |
+| Late-stage private and pre-IPO (Series D and later, secondaries, pre-IPO rounds, IPO underwriting) | Brad Gerstner, Gavin Baker, Cathie Wood | `lenses/late-stage-private-lens.md` |
 
 When a trade is a stock view expressed through options, use both: Worth for
 the directional and timing read, Sosnoff for the structure and mechanics.
+When a late-stage private name goes public, the private lens covers the
+IPO underwriting, lock-up, and sizing; Worth takes over for the chart once
+there is enough public trading history.
+
+## Late-stage private analysis: Gerstner, Baker, and Wood are the experts
+
+Whenever we are working a late-stage private or pre-IPO position
+(evaluating a Series D or later round, a secondary, a pre-IPO allocation,
+an IPO, or a fund that holds such names), analyze it through the
+Gerstner, Baker, and Wood lens by default. The full framework lives in
+`lenses/late-stage-private-lens.md`; read it before doing this work.
+
+### Retrieval protocol (required, not optional)
+
+Before giving a late-stage private recommendation:
+
+1. Run a Parallel Search (`mcp__Parallel_Search__web_search`) for current
+   commentary from all three on the name, sector, or the private market
+   broadly. Use two or three queries per expert, for example:
+   - `Brad Gerstner <company or theme> <current month year>` and
+     `BG2 pod <topic>`
+   - `Gavin Baker Atreides <company or theme> <current month year>`
+   - `Cathie Wood ARK Venture <company> <current month year>` and
+     `ARK Big Ideas <current year> <theme>`
+2. Prefer primary sources: BG2 Pod episodes, Invest Like the Best and
+   Capital Allocators interviews, ARK research and ARK Venture Fund
+   holdings disclosures, direct interviews in Business Insider or CNBC.
+   Third-party summaries are corroboration, not the source.
+3. Note the publish date of what you found. If nothing is more recent than
+   about 90 days, say so explicitly and fall back to the framework document.
+4. Cite what you used. Distinguish "framework rule" from "current view"
+   and name which of the three holds it. Where they disagree, say so.
+5. State position bias. All three are long most of what they discuss.
+
+### Output shape for a late-stage private analysis
+
+- Lead with the round and structure: stage, post-money, preference stack,
+  primary versus secondary, lock-up, and expected IPO window.
+- Run the three tests in order: Gerstner (AI-accelerated growth, real
+  revenue, capex-to-revenue math), Baker (LLCC risk score, position in the
+  physical stack, what falsifies the thesis), Wood (cost curve, five-year
+  TAM, public comps and existing fund exposure).
+- Give a sizing and exit plan: conviction-adjusted size, the panic-early or
+  double-down-late choice made in advance, post-IPO drawdown expectation.
+- Flag stale marks. Say whether the last-round price holds against current
+  public multiples. Do not quietly carry a mark that the public comps no
+  longer support.
+- Fundamentals, deal-specific legal terms, and other lenses are welcome as
+  a secondary section, never as the default.
 
 ## Public stock analysis: Worth lens is the default
 
@@ -89,6 +139,7 @@ Do not run on framework memory alone. Before giving an options recommendation:
 
 ## Scope
 
-These defaults apply to public stock and options trading work only.
-Private equity and other investment analysis in this repo is not governed
-by either lens.
+These defaults apply to public stock trading, options trading, and
+late-stage private or pre-IPO work. Buyout-style private equity, early-stage
+venture (seed through Series C), and other investment analysis in this repo
+are not governed by any of the three lenses.
