@@ -26,7 +26,7 @@ run 2026-09-03; no figure below is drawn from training-data memory.
 
 | Rank | Vehicle | Type | Ticker | Minimum | NAV / return (as of) | Fee / carry | Liquidity | Why ranked here |
 |---|---|---|---|---|---|---|---|---|
-| 1 | **Destiny Tech100** | Publicly traded closed-end fund | NYSE: DXYZ | None (exchange-traded) | NAV $24.56/sh (Mar 31, 2026 NPORT-P); market price ~$31–34 (checked 2026-09-01, stockanalysis.com) | 2.5% annual mgmt fee | Daily, exchange liquidity | Only vehicle here with true daily liquidity and zero minimum; trades at a steep premium to NAV (~30–40%), which is itself the key risk to flag, not a reason to exclude it from #1 on accessibility. |
+| 1 | **Destiny Tech100** | Publicly traded closed-end fund | NYSE: DXYZ | None (exchange-traded) | Net assets $1,634,830,251 (Jun 30, 2026 N-PORT-P, filed 2026-08-28 — 🟢 filing); issuer-reported NAV $34.30/sh vs. market price $32.70 (checked 2026-09-06, destiny.xyz) | 2.5% annual mgmt fee | Daily, exchange liquidity | Only vehicle here with true daily liquidity and zero minimum; as of 2026-09-06 it is trading at a ~5% **discount** to NAV, not the ~30–40% premium seen through August — a material reversal worth noting to anyone still pricing it as a premium vehicle. |
 | 2 | **Fundrise Innovation Fund** | NYSE-listed evergreen VC fund | NYSE: VCX | None (exchange-traded) | NAV $18.97/sh (Mar 31, 2026 N-CSR/A); closed $41.25 (Aug 18, 2026) | Fund-level fee not separately itemized in filings reviewed | Daily since NYSE listing (Mar 19, 2026); lockup on legacy shares accelerated to Aug 13, 2026 | Largest disclosed exposure to top-tier names (Anthropic 16.5%, Databricks 14.1%, OpenAI 12.4% of net assets per Mar 2026 filing) with SEC-filed holdings transparency exceeding any marketplace on this list. |
 | 3 | **ARK Venture Fund** | Interval fund (quarterly repurchase) | ARKVX (not exchange-listed) | $500 | NAV ≈$27.00 (~Jan 12, 2026); 1-yr NAV return +77.8% (through Jun 25, 2026) | Standard interval-fund expense ratio (not independently re-verified this run) | Quarterly repurchase offers only — no daily exit | Lowest minimum of any vehicle on this list by a wide margin ($500 vs. $2,500+ everywhere else), with SEC NPORT-P-disclosed holdings in SpaceX, OpenAI, Anthropic. |
 | 4 | **Hiive** | Live order-book secondary marketplace | — (private company access) | $25,000 standard (up to $100–250K on some direct transfers); Hiive Funds carry no stated minimum floor confirmed | Hiive50 Index tracks the 50 most-liquid pre-IPO names, reconstituted quarterly (site update 2026-06-26) | 4.85% buyer / 5.75% seller commission (tiers down at size); **Hiive Funds sleeve: 0% mgmt fee / 0% carry** | Order-matched, hours-to-days depending on counterparty | Most transparent pricing of the marketplace tier (published bid/ask, not RFQ) and the only marketplace offering a 0%-fee fund sleeve; largest named-holding overlap with the hottest AI/defense names (Anthropic, SpaceX, Anduril top the Q2 2026 volume list). |
@@ -39,7 +39,7 @@ run 2026-09-03; no figure below is drawn from training-data memory.
 
 ## Confidence flags
 
-- **Destiny Tech100 (#1):** Market price trades at a large, volatile premium to last-filed NAV (Mar 31, 2026); no Q2 2026 NAV/holdings filing was available as of the most recent check (2026-08-30/09-01) — the premium figure should be treated as an estimate, not a fixed number.
+- **Destiny Tech100 (#1):** The Q2 2026 N-PORT-P (period ended June 30, 2026) is now filed and confirms net assets of $1.635B; however, the $34.30 per-share NAV figure itself is issuer-reported (destiny.xyz), not independently filed at the per-share level, and market price is volatile day to day — treat the ~5% discount-to-NAV figure as a snapshot (2026-09-06), not a fixed number.
 - **AG Dillon (#8):** All AUM/fund-count figures are either the firm's own non-neutral marketing (agdillon.com, Sep 2025) or a separately registered SEC entity (AG Dillon Asset Management LP) that may not be directly comparable — flagged explicitly per this repo's house rule on non-neutral sources. Underlying fund holdings sit behind a password-gated advisor portal and are not independently verifiable.
 - **Forge Global (#6):** Current investment minimum was not independently re-confirmed this run; third-party aggregator pages cite figures that may be stale post-Schwab-acquisition integration.
 - **Augment (#7):** The headline $100 minimum is the platform's own marketing claim, not independently verified — treat the $10K figure as the confirmed floor until that ships and is confirmed elsewhere.
@@ -84,3 +84,24 @@ repo's `offerings/` files plus fresh verification of the macro secondaries data
 and the Destiny Tech100 live quote. No changes were made to any individual
 firm's `current-offerings.md` file this run; all fee terms, AUM, and NAV figures
 matched what was already on file as of the 2026-08-22/08-31 baseline.
+
+## Update — 2026-09-06
+
+Destiny Tech100's Q2 2026 (June 30) N-PORT-P has now been filed (2026-08-28),
+resolving the "no Q2 report" gap flagged in the 2026-08-22 offerings file and
+the confidence flag above. Net assets confirmed by the filing at $1,634,830,251
+— roughly double the $742.5M portfolio value on file for March 31, 2026.
+Issuer-reported NAV/share rose to $34.30 (+39.7% QoQ per the issuer), while the
+market price ($32.70, 2026-09-06) has moved from the ~30–40% premium documented
+through August to roughly a 5% discount to NAV — the #1 ranking's rationale
+("zero minimum, daily liquidity") still holds, but the premium/discount framing
+in the "why ranked here" column has been corrected accordingly; see
+`offerings/destiny-tech100/current-offerings.md` (2026-09-06 tracker entry) for
+full detail, including new post-quarter investments (OpenAI, Fluidstack, Boom
+Technology) and one newly disclosed holding (Vercel Inc.) that are issuer
+claims, not yet independently filed. No other vehicle on this list changed
+materially this run (AG Dillon, Forge, EquityZen, Hiive, Fundrise VCX, ARK
+Venture Fund all re-checked against fresh web searches on 2026-09-06 with no
+new fee/AUM/structural changes found). PR #1 (this branch), which holds the
+only copy of this repo's research, remains open and unmerged as of this run —
+now 15 days since it was opened (2026-08-22).

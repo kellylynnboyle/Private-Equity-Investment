@@ -60,3 +60,24 @@ Form N-PORT filed **2026-05-29** (portfolio as of 2026-03-31) — dollar-value c
 
 Source: [SEC Form N-PORT](https://www.sec.gov/Archives/edgar/data/1843974/000089418926016628/xslFormNPORT-P_X01/primary_doc.xml) — 🟢 high confidence
 
+---
+
+## Tracker Update — 2026-09-06 (resolves the 2026-08-22 "no Q2 report" caveat)
+
+The Q2 2026 (period ended June 30, 2026) N-PORT-P has now been filed, closing the gap flagged above.
+
+- **Net assets: $1,634,830,251.28** (total assets $1,643,373,699.75 less liabilities $8,543,448.47) — 🟢 filing: [Form N-PORT-P, filed 2026-08-28, period 2026-06-30](https://www.sec.gov/Archives/edgar/data/1843974/000089418926024246/primary_doc.xml). This roughly doubles the $742.5M portfolio value reported for Mar 31, 2026.
+- **NAV per share: $34.30** (issuer-reported, +39.7% QoQ, +395.7% over 1yr, +72.1% YTD, +608.7% since NYSE listing) — 🟡 issuer claim (non-neutral): [destiny.xyz/tech100](https://destiny.xyz/tech100), checked 2026-09-06. Net-assets figure on this page ($1,634,830,252) matches the SEC filing above to the dollar, which corroborates the issuer's NAV/share math even though the per-share figure itself isn't independently filed here.
+- **Market price vs. NAV — reversal from premium to a slight discount:** DXYZ quoted $32.70 on the issuer's own page (2026-09-06) against the $34.30 NAV — roughly a **4.7% discount**, a reversal from the ~33–40% premium documented in the 2026-08-22 update above. Do not carry the old premium narrative forward; the public numbers no longer support it.
+- **Current portfolio: 37 companies** (target still 100), per issuer site, vs. 27 positions reported 2026-08-22.
+- **New portfolio allocation by theme** (% of deployed capital, issuer-reported): AI 49.7%, Space & Frontier 36.6%, Financial Services 7.4%, Enterprise & Cloud 3.7%, Consumer & Social 2.5%.
+- **New holding not previously tracked in this file:** Vercel Inc. – Class A Common Stock, $1,132,427.66 fair value (~0.07% of net assets) — 🟢 filing (same N-PORT-P as above).
+- **Subsequent investments disclosed post-quarter** (issuer site, "as of August 27, 2026," not yet reflected in the June 30 N-PORT-P holdings or in Current Portfolio/Full Investment Portfolio counts above) — 🟡 issuer claim:
+  - Aug 13, 2026: Goanna Capital 26E LLC (economic exposure to OpenAI Group PBC Class A Common Stock) — $150.0M
+  - Jul 16, 2026: Magnitude FSTK, LLC (Fluidstack Ltd Series B Preferred) — $15.0M
+  - Aug 4, 2026: Boom Technology, Inc. (SAFE) — $4.0M
+
+Sources: [SEC Form N-PORT-P, filed 2026-08-28, period 2026-06-30](https://www.sec.gov/Archives/edgar/data/1843974/000089418926024246/primary_doc.xml) — 🟢 filing; [destiny.xyz/tech100](https://destiny.xyz/tech100), checked 2026-09-06 — 🟡 issuer's own site, non-neutral.
+
+**Caveat:** No independent (non-issuer) source found yet for the $34.30 per-share NAV figure or the post-quarter subsequent-investment amounts; both are issuer claims. The filing corroborates only the aggregate net-assets dollar figure. Flag for next run: check the next N-CSR/annual report for independent confirmation of per-share NAV and the subsequent-investment amounts.
+
