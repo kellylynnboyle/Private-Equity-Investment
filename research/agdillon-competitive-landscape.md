@@ -6,7 +6,7 @@ _Prepared: 2026-08-22_
 
 ## Context
 
-AG Dillon's positioning is narrow enough that there's no single, published "competitor list" for the firm — it's a small, RIA-distributed shop (31 funds, ~$319M AUM) built around single-company pre-IPO secondary access, wrapped in an advisor-friendly SMA/fund structure (the Pre-IPO Stock SMA and the Bi-Annual Fund Offerings both ultimately place capital into the same AGDF-series pre-IPO funds, at the same 3% first-year fee + 10% carry, under the same manager).
+AG Dillon's positioning is narrow enough that there's no single, published "competitor list" for the firm — it's a small, RIA-distributed shop (SEC-registered entity AUM $262M per Form ADV as of May 2026, ~27-30 AGDF-series funds and counting — see `offerings/ag-dillon/current-offerings.md` for full sourcing; an earlier, uncited "31 funds, ~$319M AUM" figure in this line has been removed as unverifiable against any source in this repo) built around single-company pre-IPO secondary access, wrapped in an advisor-friendly SMA/fund structure (the Pre-IPO Stock SMA and the Bi-Annual Fund Offerings both ultimately place capital into the same AGDF-series pre-IPO funds, at the same 3% first-year fee + 10% carry, under the same manager).
 
 Based on what actually competes for the same RIA dollars and the same investor use case, the field breaks into two tiers.
 
@@ -84,3 +84,17 @@ Fresh targeted checks on AG Dillon, Forge/EquityZen/Hiive, and Destiny Tech100 f
 Persisted an ARK Venture Fund (ARKVX) holdings snapshot (08/31/2026 vs. 07/31/2026, from the fund's own monthly holdings CSVs) to `offerings/ark-venture-fund/current-offerings.md` — this data had already been surfaced and published to the companion dashboard artifact by an earlier same-day session but had not yet been committed to the repo's tracked files; this update closes that gap so it isn't lost to git history. No other offerings files changed this run.
 
 PR #1 still open/unmerged, now 13 days old, unchanged mergeable state. No notification sent this run — the ARK data is a persistence fix rather than new information (it was already known/published earlier today), and the PR-blocker re-flag isn't due until ~2026-09-08 per the throttle.
+
+## Update — 2026-09-07
+
+Checked Open Brain (14 prior notes, 8/22–9/6, all describing the same PR #1 blocker) and PR #1 directly — still open, unmerged, 16 days old, last commit 2026-09-06. Corrected an unsourced figure in this file's opening paragraph: "31 funds, ~$319M AUM" appeared nowhere else in this repo and had no citation, so it was replaced with the properly sourced $262M AUM (SEC Form ADV) figure already used in `offerings/ag-dillon/current-offerings.md`.
+
+Fresh research this run found genuinely new, primary-source-confirmed content (first material AG Dillon update since 9/3): two new AGDF-series funds, **AGDF29 LP and AGDF30 LP**, both filed Form D on 2026-08-28 — confirmed directly from each fund's EDGAR `primary_doc.xml` (not an aggregator), both naming AG Dillon LLC as GP and Aaron Dillon as founder. This extends the fund count past the AGDF26 ceiling this repo had been tracking since 8/22, and is independent corroboration that AG Dillon is still actively raising. Also filled in a detail gap for AGDF19 LP ($3.67M sold, 46 investors, filed 2026-04-21) and reconfirmed the $262M AUM figure via a second independent aggregator (RIA Intel) citing the same underlying May 2026 Form ADV filing FINTRX had already sourced.
+
+One aggregator-sourced lead (Radient Analytics) grouped three "KC VC" funds under AG Dillon's CRD — checked the primary Form D for KC VC 4, LP directly on EDGAR and found its GP is **Krane Capital Management, LLC** (Jonathan Krane, CEO), not AG Dillon. Ruled out and excluded; noting here so a future run doesn't re-surface it as a false "new AG Dillon fund family." Full detail and sources in `offerings/ag-dillon/current-offerings.md`'s 2026-09-07 update.
+
+Forge/EquityZen/Hiive, Fundrise VCX, ARK Venture Fund, and Destiny Tech100 all re-checked — no material change versus the 9/4–9/6 baseline (DXYZ trading ~$32.25–32.90, within the already-documented range; ARK's "K2 Space Series D" promotional teaser matches an already-tracked position, not a new one; Forge/EquityZen/Hiive fee and ownership structures unchanged).
+
+Broader market context: found a September 2026 secondaries-market data breakdown (Jefferies/Lazard 2025 full-year figures: $233–240B total volume, 92% average buyout pricing vs. NAV, 13.6–13.9% average LP-led discount) that complements rather than contradicts the H1-2026-specific figures already cited in `reports/top10-ranked-vehicles.md`'s market summary — not added there this run since the two reports cover different measurement windows (full-year 2025 vs. H1 2026) and merging them risks conflating the two; flagging here for whoever next revises that summary to reconcile explicitly rather than blend.
+
+PR #1 is now 16 days old, still zero merge action across 9+ flagged runs. Per the throttle (last dedicated merge-blocker notification 2026-09-01, last content notification 2026-09-06), a re-flag was not strictly due until ~9/8, but this run also has genuine new content (the AGDF29/30 filings) to report — see notification decision in the self-improvement note.
