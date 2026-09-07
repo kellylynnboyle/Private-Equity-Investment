@@ -7,16 +7,21 @@ _Last updated: 2026-08-22_
 **Bottom line:** AG Dillon is a small, RIA-distributed shop (Aaron Dillon, NY). Specific company-level holdings inside the currently open AGDF-series funds sit behind a password-protected advisor portal and are not publicly disclosed. What follows is what's publicly confirmable.
 
 ## Currently raising / open
+- AGDF30, AGDF29 — theme not shown on the public funds page yet (too new; Form D filed 2026-08-28, see 2026-09-07 update below)
 - AGDF26, AGDF25, AGDF24 — AI Infrastructure theme
 - AGDF23 — AI Large Language Model theme
 - AGDF22 — Space Economy theme
 - AGDF21 — Defense Technology theme
-- AGDF20, AGDF19 — theme not disclosed
-- Target companies for these open funds are **not publicly disclosed**.
+- AGDF20 — AI Infrastructure theme (corrected 2026-09-07; earlier scrape of this file had it as "not disclosed" — a fuller pull of the same live page shows the theme column)
+- AGDF19 — Space Economy theme (corrected 2026-09-07, same reason)
+- **Specific company/stock targets for these open funds are still not publicly disclosed** — only the sector theme is public. Company-level detail sits behind AG Dillon's password-protected advisor portal.
+- The firm confirmed (own Aug 31, 2026 "Pre-IPO Stock Metric Reports" PDF) that a **new cohort of funds is closing September 25, 2026** — the specific company names for that close are on page 2 of the PDF as a table/image, which did not extract as text; not independently confirmed this run.
 
 ## Last disclosed closed cohort
 - 6 funds closed March 7, 2025: **Anduril, OpenAI, xAI, Groq, Figure AI**, and one unnamed space-economy company. Raised $30M across 33 RIA/IBD participants.
 - A further close was announced for March 31, 2026 (via the firm's podcast) — no post-close company list or AUM confirmation found.
+- Fund naming convention (confirmed via podcast fund announcements, e.g. "The AG Dillon Anduril Pre-IPO Stock Fund is now accepting..."): each AGDF number is a **single-stock SPV** named after its target company, e.g. AG Dillon Space Fund 4 (AGDF5), AG Dillon OpenAI Fund 3 (AGDF6), AG Dillon Databricks Fund (AGDF7), AG Dillon Hugging Face Fund (AGDF10), AG Dillon Groq Fund (AGDF11), AG Dillon xAI Fund (AGDF12) — all per the firm's own Aug 2024 product-map PDF. 🟡 non-neutral source (firm's own marketing), but internally consistent with the fund list below.
+- **Inferred (not confirmed) mapping of the March 7, 2025 close to specific fund numbers**, by matching each named company's likely theme against the theme column on `agdillon.com/funds` for the six funds that closed 03/2025 (AGDF13–AGDF18): AGDF13 (Defense Technology, $9.62M) → **Anduril**; AGDF14 (Space Economy, $9.64M) → the unnamed space-economy company; AGDF17 (AI Infrastructure, $5.94M) → **Groq**; AGDF18 (Humanoid Robotics, $2.16M) → **Figure AI**; AGDF15 ($1.18M) and AGDF16 ($6.31M), both AI Large Language Model theme → **OpenAI** and **xAI**, in unknown order. 🟡 medium confidence — theme-and-close-date matching only, not an independent per-fund confirmation; treat as a working hypothesis, not fact, until corroborated (e.g. from an advisor-portal fact sheet).
 
 ## Firm scale
 - Firm's own site: $140M AUM / 25 funds / 45 RIA-IBD partners (as of Sep 2025 — stale).
@@ -62,4 +67,15 @@ _Last updated: 2026-08-22_
 **False lead checked and ruled out:** Radient Analytics' "Fund Raising Information" table for AG Dillon Asset Management LP (CRD 328384) also listed three "KC VC" funds (KC VC 3, 4, 7 LP) alongside the AGDF entries, which would have been a notable new fund family if genuine. Fetched the primary Form D for KC VC 4, LP (CIK 0002148213) directly from EDGAR: its General Partner/Promoter is **Krane Capital Management, LLC**, signed by **Jonathan Krane, CEO** — a different manager entirely (plausibly connected to Aaron Dillon's prior KraneShares co-founding history, but not AG Dillon Asset Management LP or AG Dillon LLC). **Not an AG Dillon fund** — excluded from this tracker. Noting this explicitly per the routine's rule to prefer primary sources over aggregators: Radient's grouping was wrong and would have overstated AG Dillon's fund count/product breadth if taken at face value.
 
 - Sources: [AGDF29 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2151475/000215147526000001/xslFormDX01/primary_doc.xml) — 🟢 primary; [AGDF30 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2151476/000215147626000001/xslFormDX01/primary_doc.xml) — 🟢 primary; [KC VC 4, LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2148213/000214821326000001/xslFormDX01/primary_doc.xml) — 🟢 primary (used to rule the lead out); [Radient Analytics — AG Dillon Asset Management LP](https://radientanalytics.com/firm/adv/ag-dillon-asset-management-lp-328384) — 🟡 aggregator; [RIA Intel — AG Dillon Asset Management LP](http://ria-intel.com/adviser/ag-dillon-asset-management-lp-328384) — 🟡 aggregator, citing primary Form ADV.
+
+---
+
+## Update — 2026-09-07 (2): attempting to map open funds to single-stock targets
+
+Kelly asked whether the specific stock in each currently-open fund could be identified. Findings:
+
+- **Confirmed AG Dillon's fund-naming/structure convention** via multiple podcast "fund announcement" segments (buzzsprout.com/2079052 episode descriptions, e.g. E178 and E163: "The AG Dillon Anduril Pre-IPO Stock Fund is now accepting...") and the firm's own Aug 2024 product-map PDF: **each AGDF number is a single-stock SPV**, named "AG Dillon [Company] Pre-IPO Stock Fund." 🟡 firm's own marketing/podcast, non-neutral, but internally consistent.
+- Re-pulled `agdillon.com/funds` and got a fuller table than the 2026-08-22 baseline had — it fills in the theme column for AGDF19 (Space Economy) and AGDF20 (AI Infrastructure), corrected above, and gives themes for the full run of closed funds AGDF1–AGDF18 with close dates. This let us **infer** (not confirm) which named company from the March 7, 2025 close corresponds to which fund number, by matching theme + close date — see the inferred mapping added to the "Last disclosed closed cohort" section above. 🟡 medium confidence, inference only.
+- Found via the firm's own **Aug 31, 2026 "Pre-IPO Stock Metric Reports" PDF** (`agdillon.com/agdillon_preipo_metrics.pdf`) that AG Dillon is closing a new cohort of funds on **September 25, 2026** — page 2 of that PDF is titled "AGD Pre-IPO Stock Funds closing on Sep 25, 2026" but renders as an image/table that did not extract as text via the web-fetch tool used this run; the specific company names in that close were **not obtained**. A future run with a PDF-image-capable tool, or a check of the firm's podcast around that date (the podcast has previously narrated close-cohort company names aloud, e.g. episode E255 for the April 21, 2026 close), could resolve this.
+- **Bottom line for the currently-open funds (AGDF19–30 as of this check): no specific company/stock name is publicly confirmed for any of them.** Only sector themes are public (see "Currently raising / open" above), and AGDF29/30 don't even have a theme on the public funds page yet. Company-level detail for open funds sits behind AG Dillon's password-gated advisor portal (aaron.dillon@agdillon.com for credentials) and was not accessed this run.
 
