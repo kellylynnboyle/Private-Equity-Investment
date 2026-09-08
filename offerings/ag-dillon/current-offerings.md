@@ -7,7 +7,7 @@ _Last updated: 2026-08-22_
 **Bottom line:** AG Dillon is a small, RIA-distributed shop (Aaron Dillon, NY). Specific company-level holdings inside the currently open AGDF-series funds sit behind a password-protected advisor portal and are not publicly disclosed. What follows is what's publicly confirmable.
 
 ## Currently raising / open
-- AGDF30, AGDF29 — theme not shown on the public funds page yet (too new; Form D filed 2026-08-28, see 2026-09-07 update below)
+- AGDF32, AGDF30, AGDF29, AGDF28 — theme not shown on the public funds page yet (too new; Form D filed 2026-08-28 to 2026-09-04, see 2026-09-07 and 2026-09-08 updates below). AGDF31 has not been located in any EDGAR search to date — either unfiled, reserved, or assigned to a different date range not yet checked.
 - AGDF26, AGDF25, AGDF24 — AI Infrastructure theme
 - AGDF23 — AI Large Language Model theme
 - AGDF22 — Space Economy theme
@@ -78,4 +78,17 @@ Kelly asked whether the specific stock in each currently-open fund could be iden
 - Re-pulled `agdillon.com/funds` and got a fuller table than the 2026-08-22 baseline had — it fills in the theme column for AGDF19 (Space Economy) and AGDF20 (AI Infrastructure), corrected above, and gives themes for the full run of closed funds AGDF1–AGDF18 with close dates. This let us **infer** (not confirm) which named company from the March 7, 2025 close corresponds to which fund number, by matching theme + close date — see the inferred mapping added to the "Last disclosed closed cohort" section above. 🟡 medium confidence, inference only.
 - Found via the firm's own **Aug 31, 2026 "Pre-IPO Stock Metric Reports" PDF** (`agdillon.com/agdillon_preipo_metrics.pdf`) that AG Dillon is closing a new cohort of funds on **September 25, 2026** — page 2 of that PDF is titled "AGD Pre-IPO Stock Funds closing on Sep 25, 2026" but renders as an image/table that did not extract as text via the web-fetch tool used this run; the specific company names in that close were **not obtained**. A future run with a PDF-image-capable tool, or a check of the firm's podcast around that date (the podcast has previously narrated close-cohort company names aloud, e.g. episode E255 for the April 21, 2026 close), could resolve this.
 - **Bottom line for the currently-open funds (AGDF19–30 as of this check): no specific company/stock name is publicly confirmed for any of them.** Only sector themes are public (see "Currently raising / open" above), and AGDF29/30 don't even have a theme on the public funds page yet. Company-level detail for open funds sits behind AG Dillon's password-gated advisor portal (aaron.dillon@agdillon.com for credentials) and was not accessed this run.
+
+---
+
+## Update — 2026-09-08 (two more new fund filings — AGDF28, AGDF32)
+
+Re-ran the EDGAR full-text search for AG Dillon Form D filings in the window since the 2026-09-07 check, rather than relying on the two funds (AGDF29/30) already found. This surfaced **two additional new funds neither of the two 2026-09-07 sessions had found**, both filed the same day:
+
+- **AGDF28 LP** (CIK 0002153269) — Form D filed **2026-09-04**. Total amount sold: **$1,577,580**. Investor count: **79**. 🟢 primary source (SEC EDGAR `primary_doc.xml`, not an aggregator).
+- **AGDF32 LP** (CIK 0002151478) — Form D filed **2026-09-04**. Total amount sold: **$4,457,730**. Investor count: **96**. 🟢 primary source (SEC EDGAR `primary_doc.xml`).
+- Both list **AG Dillon LLC** as General Partner/Promoter and **Aaron Dillon** as "founder and Managing Director of the Managing Member of the General Partner" — identical structure/signatory (Christopher Plummer, CCO) to AGDF29/30 — independently confirmed genuine AG Dillon entities, not an aggregator mis-grouping.
+- **Numbering gap:** AGDF31 was not found in this search (EDGAR full-text search for "AG Dillon" Form D filings dated 2026-08-28 through 2026-09-08 returned exactly four hits: AGDF28, 29, 30, 32). Either AGDF31 doesn't exist, was filed outside this window, or was filed under a name/entity structure this search didn't match — flagged as an open gap for a future run to check directly by CIK sequence (AGDF30 = CIK 2151476, AGDF32 = CIK 2151478 — CIK 2151477 would be the natural next check for a possible AGDF31).
+- **Running fund count:** with AGDF28, 29, 30, and 32 now confirmed, the firm has filed at least 4 new single-stock SPVs since the 2026-08-22 baseline (which tracked only through AGDF26) — evidence of continued, active capital raising at a pace of roughly one new fund per week through late August/early September 2026. Aggregate new capital confirmed across these four filings: $1,577,580 + $2,072,460 + $1,874,580 + $4,457,730 = **$9,982,350** raised across **362 investors** (79+91+91+96... approximate, since none of these totals are cumulative subscription counts and some investors may recur across funds).
+- Sources: [AGDF28 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2153269/000215326926000001/xslFormDX01/primary_doc.xml) — 🟢 primary; [AGDF32 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2151478/000215147826000001/xslFormDX01/primary_doc.xml) — 🟢 primary.
 
