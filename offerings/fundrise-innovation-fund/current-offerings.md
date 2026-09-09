@@ -48,3 +48,58 @@ Confirms the March 31, 2026 N-CSR/A holdings above, plus one addition not previo
 
 Source: [SEC N-CSR/A filing](https://www.sec.gov/Archives/edgar/data/1867090/000199937126011950/fundrise-ncsra_033126.htm) — 🟢 high confidence
 
+---
+
+## Update — 2026-09-09
+
+**A newer primary filing supersedes the March 31, 2026 data above.** VCX's Q2 2026 N-PORT
+(period ended 2026-06-30) was filed 2026-08-27 and appeared on EDGAR 2026-08-28 — accession
+0001867090-26-000109, filer Fundrise Innovation Fund LLC (CIK 0001867090), signed by Lauren
+Stuntebeck, Assistant Treasurer. 🟢 Filing existence, filer, period, and filing date confirmed
+directly against the primary document at
+[EDGAR primary_doc.xml](https://www.sec.gov/Archives/edgar/data/1867090/000186709026000109/xslFormNPORT-P_X01/primary_doc.xml).
+
+The NAV, holdings-weight, and transaction detail below are 🟡 **not independently re-extracted
+by this run** — the fetch tool returned only the filing's signature/header block, not the
+holdings schedule. They are sourced from Financial Samurai's published analysis of that same
+N-PORT (dated 2026-09-03, updated), which states its NAV figures are "derived from the fund's
+own 6/30/2026 N-PORT filing." Treat as secondary interpretation of a primary filing, not the
+filing itself, until a future run independently pulls the holdings schedule.
+
+- **NAV/share: $21.70** as of 6/30/2026, up from $18.97 at 3/31/2026 (+14.4%). The fund now
+  strikes NAV quarterly only (continuous offering closed in Feb 2026, tender program ended
+  March 2026) — no interim monthly NAV exists; April and May both booked 0.00%, June +14.39%.
+- **Anthropic remains the largest holding** at ~22% of net assets (~29% of the venture book
+  excluding cash/Treasuries) as of 6/30/2026 — versus 16.5% of net assets at 3/31/2026, though
+  the two percentages use different denominators per the source's own caveat (fund's Feb 2026
+  marketing page used 20.7%; the annual report carried 16.5%).
+- **Partial sale of the Anthropic position:** one of three SPV vehicles holding Anthropic
+  (~139,000 shares, ~$36M, roughly a third of the prior Anthropic exposure) was disposed of
+  during the quarter at ~$258/share. The two remaining Anthropic vehicles were then marked at
+  $589/share as of quarter-end. N-PORT does not disclose the reason for a disposal; the source
+  speculates (not confirmed) it may reflect the SPV's own wind-down rather than a Fundrise
+  decision to trim. This is a portfolio-composition change worth flagging plainly, not
+  rationalizing away, given how concentrated VCX's return this quarter was in one name (source
+  attributes ~96% of the quarter's dollar gain to Anthropic's markup).
+- Databricks, previously the #2 or #1 holding depending on period (~20% at one point per the
+  source), and other Q1-disclosed names (OpenAI, Anduril, Ramp, SpaceX, Flock, Epic Games, dbt
+  Labs, QTS) have not been re-confirmed at updated weights this run — flagged as open until the
+  full Q2 holdings schedule is independently pulled.
+- Fundrise has reportedly filed for a follow-on vehicle ("VCX 2") under a new CIK
+  (0002138533 per the source) — 🔴 unverified this run, single secondary source, not confirmed
+  against EDGAR directly.
+
+**Market price context:** DXYZ-style premium/discount framing does not carry over cleanly here
+because the $41.25 (Aug 18) quote already on file predates this NAV revision; recompute any
+premium-to-NAV figure against $21.70, not $18.97, before citing one.
+
+Source: [Financial Samurai, "VCX NAV Estimate," updated 2026-09-03](https://www.financialsamurai.com/fundrise-vcx-nav-estimate)
+(non-neutral: author discloses a personal ~$435K Anthropic-via-VCX position and that Fundrise is
+a paid sponsor of the site — flagged per this repo's non-neutral-source rule); filing existence
+verified independently via
+[EDGAR](https://www.sec.gov/Archives/edgar/data/1867090/000186709026000109/xslFormNPORT-P_X01/primary_doc.xml).
+
+**Caveat carried forward:** the full Q2 2026 holdings schedule (all positions, not just
+Anthropic/Databricks) has not been independently pulled from the N-PORT by this run — a future
+run should fetch the XML directly (not just the header) to confirm the complete weight table.
+

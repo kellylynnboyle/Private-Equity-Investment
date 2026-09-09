@@ -108,3 +108,27 @@ Rather than treating the 9/7 AGDF29/30 EDGAR check as the final word, re-ran the
 Forge, EquityZen, Hiive, Fundrise VCX, ARK Venture Fund, and Destiny Tech100 were re-checked with no material change versus the 9/6–9/7 baseline; one third-party "Flash" AI-generated equity research report on VCX cited a September 21, 2026 lockup expiration date, which conflicts with the already-filed, SEC-8-K-confirmed accelerated lockup (August 13, 2026) on file here — treated as a low-quality/likely-erroneous secondary source, not a correction, and not incorporated.
 
 PR #1 is now 17 days old, unmerged, across 10+ flagged runs — see the self-improvement note for this run's notification decision.
+
+## Update — 2026-09-09
+
+Checked Open Brain (15+ prior notes through 9/8) and confirmed PR #1's `mergeable_state` had
+flipped to **"dirty"** — an actual add/add conflict on CLAUDE.md now that `main` carries the
+unrelated lens-routing framework (PRs #2–#6), not just the "unknown" GitHub-API staleness prior
+runs had (correctly) not escalated on. Resolved it this run — see `reports/top10-ranked-vehicles.md`'s
+2026-09-09 update for the merge detail; this is the first run to actually move PR #1 toward
+mergeable rather than re-flagging it stuck.
+
+Re-verified AG Dillon (fee terms, AUM, AGDF28/29/30/32 filings all still current versus 9/7–9/8),
+Forge Global, EquityZen, and Hiive — no material change. Ruled out the AGDF31 CIK lead flagged
+2026-09-08 (CIK 2151477 = Clio Studios, Inc., unrelated issuer) — the numbering gap stands,
+unresolved.
+
+Found one genuinely new, filing-backed, material item outside AG Dillon: **Fundrise Innovation
+Fund (VCX)'s Q2 2026 N-PORT** (filed 2026-08-27, surfaced on EDGAR 2026-08-28) — a filing dated
+before this repo's 9/3 report but not previously located by any run. It revises VCX's NAV up to
+$21.70/share (from the $18.97 Mar 31 figure on file) and discloses that roughly a third of the
+fund's Anthropic position was sold mid-quarter before the rest was marked up sharply — Anthropic
+remains the top holding at ~22% of net assets. Full detail, sourcing, and confidence caveats in
+`offerings/fundrise-innovation-fund/current-offerings.md` and
+`reports/top10-ranked-vehicles.md`'s 2026-09-09 updates. Destiny Tech100 (DXYZ ~$32.70–34.07) and
+ARK Venture Fund re-checked with no material change versus 9/6–9/8.

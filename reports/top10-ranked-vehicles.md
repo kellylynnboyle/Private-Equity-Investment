@@ -27,7 +27,7 @@ run 2026-09-03; no figure below is drawn from training-data memory.
 | Rank | Vehicle | Type | Ticker | Minimum | NAV / return (as of) | Fee / carry | Liquidity | Why ranked here |
 |---|---|---|---|---|---|---|---|---|
 | 1 | **Destiny Tech100** | Publicly traded closed-end fund | NYSE: DXYZ | None (exchange-traded) | Net assets $1,634,830,251 (Jun 30, 2026 N-PORT-P, filed 2026-08-28 — 🟢 filing); issuer-reported NAV $34.30/sh vs. market price $32.70 (checked 2026-09-06, destiny.xyz) | 2.5% annual mgmt fee | Daily, exchange liquidity | Only vehicle here with true daily liquidity and zero minimum; as of 2026-09-06 it is trading at a ~5% **discount** to NAV, not the ~30–40% premium seen through August — a material reversal worth noting to anyone still pricing it as a premium vehicle. |
-| 2 | **Fundrise Innovation Fund** | NYSE-listed evergreen VC fund | NYSE: VCX | None (exchange-traded) | NAV $18.97/sh (Mar 31, 2026 N-CSR/A); closed $41.25 (Aug 18, 2026) | Fund-level fee not separately itemized in filings reviewed | Daily since NYSE listing (Mar 19, 2026); lockup on legacy shares accelerated to Aug 13, 2026 | Largest disclosed exposure to top-tier names (Anthropic 16.5%, Databricks 14.1%, OpenAI 12.4% of net assets per Mar 2026 filing) with SEC-filed holdings transparency exceeding any marketplace on this list. |
+| 2 | **Fundrise Innovation Fund** | NYSE-listed evergreen VC fund | NYSE: VCX | None (exchange-traded) | NAV $21.70/sh (Jun 30, 2026 N-PORT, filed 2026-08-27 — 🟢 filing existence confirmed, NAV figure 🟡 via secondary analysis, not independently re-extracted); last-quoted price $41.25 (Aug 18, 2026, now stale relative to the revised NAV) | Fund-level fee not separately itemized in filings reviewed | Daily since NYSE listing (Mar 19, 2026); lockup on legacy shares accelerated to Aug 13, 2026; NAV now strikes quarterly only (no interim monthly mark) | Largest disclosed exposure to top-tier names, still led by Anthropic (~22% of net assets as of Jun 30, 2026) with SEC-filed holdings transparency exceeding any marketplace on this list — though the fund trimmed roughly a third of its Anthropic position mid-quarter, a concentration/composition change worth flagging alongside the transparency case. |
 | 3 | **ARK Venture Fund** | Interval fund (quarterly repurchase) | ARKVX (not exchange-listed) | $500 | NAV ≈$27.00 (~Jan 12, 2026); 1-yr NAV return +77.8% (through Jun 25, 2026) | Standard interval-fund expense ratio (not independently re-verified this run) | Quarterly repurchase offers only — no daily exit | Lowest minimum of any vehicle on this list by a wide margin ($500 vs. $2,500+ everywhere else), with SEC NPORT-P-disclosed holdings in SpaceX, OpenAI, Anthropic. |
 | 4 | **Hiive** | Live order-book secondary marketplace | — (private company access) | $25,000 standard (up to $100–250K on some direct transfers); Hiive Funds carry no stated minimum floor confirmed | Hiive50 Index tracks the 50 most-liquid pre-IPO names, reconstituted quarterly (site update 2026-06-26) | 4.85% buyer / 5.75% seller commission (tiers down at size); **Hiive Funds sleeve: 0% mgmt fee / 0% carry** | Order-matched, hours-to-days depending on counterparty | Most transparent pricing of the marketplace tier (published bid/ask, not RFQ) and the only marketplace offering a 0%-fee fund sleeve; largest named-holding overlap with the hottest AI/defense names (Anthropic, SpaceX, Anduril top the Q2 2026 volume list). |
 | 5 | **EquityZen** | Secondary marketplace + multi-company funds | — | $5,000–$10,000 single-company; $20,000–$50,000 multi-company funds | Growth Technology Fund II: ~$105.8M across 27 SPVs (2025 data); Growth Opportunity Fund now on Fund XII | 2.5% buyer/seller fee (cut from 5% by Morgan Stanley, effective Feb 19, 2026) | Matched-order, 30–60 day typical close | Lowest disclosed marketplace fee after the Morgan Stanley fee cut; 11+ years of multi-company fund vintages gives it the longest track record of any marketplace here. |
@@ -36,6 +36,16 @@ run 2026-09-03; no figure below is drawn from training-data memory.
 | 8 | **AG Dillon & Co. — Pre-IPO Stock SMA / AGDF Funds** | RIA-distributed SMA / bi-annual fund offering | — (RIA-gated, not public) | $2,500 | Firm-reported: $140M AUM / 25 funds (Sep 2025, stale, **non-neutral source — firm's own site**); $262M AUM / 28 accounts confirmed via SEC Form ADV (May 2026), independently corroborated by two aggregators (FINTRX and RIA Intel) — under a separately registered entity, may not be directly comparable to the site figure. Four new funds (AGDF28, 29, 30, 32) confirmed via EDGAR Form D between 2026-08-28 and 2026-09-04, evidence the firm is raising roughly one new fund per week past the 26-fund count previously tracked here | 3% first-year fee + 10% carry at the AGDF fund level; 0% AGD-level fee on the SMA wrapper | Illiquid — private secondary holdings, no public exit until underlying company IPOs or a further secondary sale | Lowest minimum of any single-name-selection vehicle on this list and structurally the closest match to Forge/EquityZen/Hiive's "you pick the name" model, but distribution is RIA-gated (not directly investable by an individual) and holdings are not publicly disclosed — ranked below the public marketplaces on transparency grounds alone. |
 | 9 | **Alumni Ventures** | VC fund-of-deals / SPV access | — | $10,000 typical (range $10K–$3M) | $1.4–1.5B+ total capital raised; 1,600+ portfolio companies (firm-reported) | 2% annual mgmt fee + 20% carry (80/20 profit share) | Illiquid — closed-end SPV/fund structure, no secondary market | Largest AUM/scale of the diversified-basket vehicles, but the highest effective cost structure on this list (2%+20% vs. AGD's 3%/10% or the marketplaces' one-time transaction fees) and the least name-level control. |
 | 10 | **North Capital PPEX** | SEC-registered ATS (RFQ/standing-order model) | — | Not publicly disclosed | Company-reported: 1,250+ approved assets, $8.7B lifetime volume — **not independently verified, no named individual holdings found** | Not publicly disclosed | RFQ/standing-order, not a live public book | Largest reported lifetime volume among the lesser-known ATSs, included as a watchlist entry rather than a fully vetted peer — retail/RIA accessibility is unconfirmed and no fee or minimum data exists in public materials. |
+
+## Confidence flags (Fundrise Innovation Fund, #2)
+
+The Jun 30, 2026 NAV ($21.70) and Anthropic-position detail come from a third-party blog's
+analysis of the N-PORT filing, not an independent re-extraction of the filing's holdings
+schedule by this run — the fetch tool returned only the filing's header/signature block. The
+blog author discloses a personal position in VCX/Anthropic and that Fundrise sponsors the site;
+treat the specific dollar and per-share figures as secondary-source until independently
+re-verified. See `offerings/fundrise-innovation-fund/current-offerings.md`'s 2026-09-09 update
+for full detail and the direct EDGAR link.
 
 ## Confidence flags
 
@@ -144,3 +154,31 @@ material change versus the 2026-09-07 baseline in this run's checks.
 
 PR #1 is now 17 days old (opened 2026-08-22), still unmerged, with zero merge
 action across 10+ flagged runs.
+
+## Update — 2026-09-09
+
+**Resolved PR #1's merge conflict.** Main had since merged an unrelated CLAUDE.md (the
+options/stock/tax lens-routing framework, PRs #2–#6), which collided with this branch's own
+CLAUDE.md (Boyle Family Office repo conventions) as an add/add conflict — GitHub's
+`mergeable_state` had flipped from "unknown" to "dirty" as a result, a genuine blocker no prior
+run had actually fixed. Merged `origin/main` into this branch, combined both CLAUDE.md documents
+(the lens-routing content stays primary; the Boyle Family Office section is nested under its
+existing Scope section, since that framework already explicitly excludes buyout-style PE from
+its coverage), and pushed. This is the first run in the PR's 18-day history to move it toward an
+actually-mergeable state rather than just re-flagging that it's stuck.
+
+Updated the **Fundrise Innovation Fund row (#2)**: VCX's Q2 2026 N-PORT (period ended 6/30/2026)
+filed 2026-08-27/surfaced 2026-08-28 — a filing no prior run had found — shows NAV up to $21.70/sh
+(from $18.97), a quarterly-only NAV-striking cadence going forward, and a materially newsworthy
+portfolio event: roughly a third of the fund's Anthropic position (~$36M) was sold mid-quarter at
+~$258/share before the remainder was marked up to $589/share by quarter-end. Anthropic remains
+the top holding at ~22% of net assets. NAV/holdings-weight figures are sourced from a third-party
+analysis of the filing (not an independent re-pull of the holdings schedule) — flagged in the new
+confidence-flag entry above; a future run should fetch the raw N-PORT XML directly to confirm the
+full position table. Full detail in
+`offerings/fundrise-innovation-fund/current-offerings.md`'s 2026-09-09 update.
+
+Re-checked AG Dillon, Forge, EquityZen, Hiive, Destiny Tech100 (DXYZ ~$32.70–34.07, unchanged
+range), and ARK Venture Fund — no material change versus the 9/6–9/8 baseline. Re-tested the
+AGDF31 numbering-gap lead flagged 2026-09-08 (CIK 2151477): that CIK belongs to an unrelated
+issuer, Clio Studios, Inc. — ruled out, not AG Dillon. AGDF31 remains genuinely unlocated.
