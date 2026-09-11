@@ -182,3 +182,18 @@ Re-checked AG Dillon, Forge, EquityZen, Hiive, Destiny Tech100 (DXYZ ~$32.70–3
 range), and ARK Venture Fund — no material change versus the 9/6–9/8 baseline. Re-tested the
 AGDF31 numbering-gap lead flagged 2026-09-08 (CIK 2151477): that CIK belongs to an unrelated
 issuer, Clio Studios, Inc. — ruled out, not AG Dillon. AGDF31 remains genuinely unlocated.
+
+## Update — 2026-09-11
+
+Fresh checks across every row found no material change versus the 2026-09-09 baseline: no new
+AG Dillon Form D filings (EDGAR re-checked for the 9/4–9/11 window — still only AGDF28/32, AGDF31
+still unlocated), no new Destiny Tech100, Fundrise VCX, ARK Venture Fund, Forge, EquityZen, or
+Hiive fee/AUM/NAV/structural changes. One data-quality note: a CEF Connect snapshot for DXYZ
+showed a "Total Common Assets $753.787M" field that conflicts with the $1.634B net-assets figure
+in DXYZ's own filed Q2 2026 N-PORT-P (row #1's source) — treated as an unreliable secondary-source
+field and **not** incorporated; the filed figure stands.
+
+PR #1 (this branch) is now 20 days open and unmerged; `mergeable_state` has been `clean` since the
+2026-09-09 conflict resolution, so nothing technical blocks a merge — only human merge action is
+outstanding. Last dedicated blocker notification was 2026-09-01 (10 days ago); see this run's
+Open Brain retrospective for the notification decision.

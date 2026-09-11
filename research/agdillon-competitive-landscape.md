@@ -132,3 +132,35 @@ remains the top holding at ~22% of net assets. Full detail, sourcing, and confid
 `offerings/fundrise-innovation-fund/current-offerings.md` and
 `reports/top10-ranked-vehicles.md`'s 2026-09-09 updates. Destiny Tech100 (DXYZ ~$32.70–34.07) and
 ARK Venture Fund re-checked with no material change versus 9/6–9/8.
+
+## Update — 2026-09-11
+
+Checked Open Brain (16+ prior notes through 9/9, all confirming the same PR #1 unmerged-blocker
+pattern) and re-ran the EDGAR full-text search for AG Dillon Form D filings, this time scoped to
+the 2026-09-04–2026-09-11 window specifically (narrower than the 9/8 run's window) — it returned
+exactly the same two hits already on file, **AGDF28 LP and AGDF32 LP** (both filed 2026-09-04), and
+nothing new. No AGDF31, no AGDF33+. The numbering gap at AGDF31 stands, still unresolved after
+three separate EDGAR passes (9/8, 9/9, 9/11).
+
+Re-checked AG Dillon's own site (still the stale Sep 2025 "25 funds / $140M AUM" marketing figure,
+unchanged), Destiny Tech100 (CEF Connect snapshot as of 9/4–9/7: $32.70 price vs. $34.30 NAV,
+-4.66% — consistent with the range already on file; one CEF Connect field, "Total Common Assets
+$753.787M," conflicts with the $1.634B net-assets figure from DXYZ's own filed Q2 2026 N-PORT-P
+already cited above and is **not** incorporated — the filed number wins per this repo's own
+sourcing rule), Fundrise Innovation Fund (VCX's own site still shows the pre-N-PORT Mar 31, 2026
+NAV/performance table, not the $21.70 Jun 30 figure already sourced here from the N-PORT itself —
+no new news items since the already-logged Jul 24, 2026 lockup acceleration and the Erebor Bank
+investment), ARK Venture Fund (top holdings unchanged: OpenAI, Stripe, Anthropic, SpaceX, Lila
+Sciences), and Forge/EquityZen/Hiive (fee/ownership structure unchanged; one fresh comparison
+source, Allocations' Jul 13, 2026 "Hiive vs EquityZen vs Forge" guide, corroborates rather than
+changes the figures already on file: Hiive ~$25K min / live order book / 0% Hiive Funds carry,
+EquityZen ~$5–10K min / 2.5% fee / Morgan Stanley-owned, Forge ~$100K direct / $5K funds / 2–5%
+seller-side fee / Schwab-owned). No material change to any tracked vehicle's fee terms, AUM, NAV,
+or the Tier 1/Tier 2 split this run.
+
+PR #1 (`claude/eloquent-clarke-lbbji3` → `main`) is now **20 days old** (opened 2026-08-22), still
+unmerged, despite `mergeable_state: clean` since the 2026-09-09 conflict resolution — there is no
+longer any technical obstacle to merging, only the standing need for a human with merge rights to
+do it. Per the routine's throttle, the last dedicated blocker notification was sent 2026-09-01 (10
+days ago, past the ~1-week threshold) — see this run's self-improvement note for the notification
+decision.
