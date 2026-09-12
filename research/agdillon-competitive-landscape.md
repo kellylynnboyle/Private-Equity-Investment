@@ -164,3 +164,19 @@ longer any technical obstacle to merging, only the standing need for a human wit
 do it. Per the routine's throttle, the last dedicated blocker notification was sent 2026-09-01 (10
 days ago, past the ~1-week threshold) — see this run's self-improvement note for the notification
 decision.
+
+## Freshness check — 2026-09-12
+
+No material change found versus the 2026-09-11 baseline: AG Dillon's own funds page still shows
+its stale Sep 2025 "25 funds / $140M AUM" marketing figure (already flagged as non-neutral and
+superseded by the $262M Form ADV figure); no new Form D beyond AGDF28/29/30/32; a direct EDGAR
+full-text search for "AGDF31" across all form types (not just Form D) returned zero hits, so the
+numbering gap is confirmed as a genuine search-coverage result, not an artifact of searching only
+Form D. Forge (Schwab-owned, mid-integration), EquityZen (Morgan Stanley-owned, 2.5% fee), and
+Hiive ($780M secondary-valuation talk from June still the most recent data point) are all
+unchanged. See `reports/top10-ranked-vehicles.md`'s 2026-09-12 update for a market-conditions
+sourcing improvement (the previously single-aggregator secondaries-pricing figure is now traceable
+to named Jefferies/Campbell Lutyens primary reports) — not a change to AG Dillon or any competitor
+figure in this file. PR #1 remains 21 days old, `mergeable_state: clean`, unmerged; no new blocker
+notification sent this run per the throttle (last sent 2026-09-01, next due ~2026-09-16 absent a
+new development).

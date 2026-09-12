@@ -197,3 +197,41 @@ PR #1 (this branch) is now 20 days open and unmerged; `mergeable_state` has been
 2026-09-09 conflict resolution, so nothing technical blocks a merge — only human merge action is
 outstanding. Last dedicated blocker notification was 2026-09-01 (10 days ago); see this run's
 Open Brain retrospective for the notification decision.
+
+## Update — 2026-09-12
+
+Fresh checks found no material change across any tracked vehicle since 2026-09-11: no new AG
+Dillon Form D filings (AGDF31 re-searched directly via EDGAR full-text search on 2026-09-12 —
+zero hits across all form types, not just Form D; the numbering gap remains genuinely unresolved,
+not a search-coverage artifact), no Forge/EquityZen/Hiive fee or ownership changes, ARK Venture
+Fund's holdings (08/31/2026 snapshot) and Destiny Tech100's price (~$32.70, Sep 4 close) match
+what's already on file, and no new Fundrise VCX filing since the 6/30/2026 N-PORT.
+
+One sourcing improvement to the **market/trend summary's** secondaries-pricing figure: the
+2026-09-03 summary flagged an angelinvestorsnetwork.com figure (venture/growth secondaries ~78%
+of NAV vs. ~92–94% for top-quartile buyout) as "medium-confidence, single-aggregator-sourced, not
+independently corroborated." A 2026-09-05 update to that same aggregator page now cites the
+underlying primary industry reports by name: **Jefferies' 2025 Global Secondary Market Review**
+(average buyout pricing 92% of NAV in 2025, down 200bps from 2024; venture/growth stakes improved
+to 78% of NAV; LP-led volume $125B / 52% of the $240B 2025 total, GP-led $115B / 48%; dedicated
+secondary buyer capital $327B, +14% YoY) and **Campbell Lutyens' 2025 Secondaries Market Flash
+Report** (average LP-led discount to NAV 13.6–13.9%, widening modestly from 13.3% in 2024). This
+doesn't change the direction of the 2026-09-03 figures — it corroborates them — but it upgrades
+the sourcing from a single unsourced aggregator claim to named primary-report citations, so the
+confidence flag on that line is resolved rather than carried forward as open. Separately,
+withintelligence.com's 2026-09-10 "Private Equity Trends 2026" piece corroborates the existing
+H1 2026 secondaries-volume figure (reports $121B per Evercore, in line with the $118–124B
+Lazard/Evercore range already on file) and adds one new context point: median PE holding periods
+now exceed 5 years across the market (vs. ~4.0–4.5 years in 2018–2019), consistent with the
+exit-backlog dynamic already described above — not a change to any figure in this report, noted
+for context only.
+
+No push notification sent this run: nothing material changed (no new fund, fee, AUM, or NAV
+move; no competitor entrant/exit), and the sourcing upgrade above is a citation improvement to
+already-reported figures, not new information. The PR #1 merge-blocker was last notified
+2026-09-01; per the ~weekly throttle the next blocker-only notification isn't due until roughly
+2026-09-16 absent a new development.
+
+**Additional sources:**
+- [PE Secondaries Market 2026: The $240B Data Breakdown — AngelInvestorsNetwork, updated 2026-09-05](https://angelinvestorsnetwork.com/market-analysis/private-equity-secondaries-market-2026-data)
+- [Private Equity Trends 2026: Slower Exits and Shifting Demand — With Intelligence, 2026-09-10](https://www.withintelligence.com/insights/private-equity-trends-2026/)
