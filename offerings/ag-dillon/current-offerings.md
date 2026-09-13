@@ -92,3 +92,17 @@ Re-ran the EDGAR full-text search for AG Dillon Form D filings in the window sin
 - **Running fund count:** with AGDF28, 29, 30, and 32 now confirmed, the firm has filed at least 4 new single-stock SPVs since the 2026-08-22 baseline (which tracked only through AGDF26) — evidence of continued, active capital raising at a pace of roughly one new fund per week through late August/early September 2026. Aggregate new capital confirmed across these four filings: $1,577,580 + $2,072,460 + $1,874,580 + $4,457,730 = **$9,982,350** raised across **362 investors** (79+91+91+96... approximate, since none of these totals are cumulative subscription counts and some investors may recur across funds).
 - Sources: [AGDF28 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2153269/000215326926000001/xslFormDX01/primary_doc.xml) — 🟢 primary; [AGDF32 LP Form D, EDGAR](https://www.sec.gov/Archives/edgar/data/2151478/000215147826000001/xslFormDX01/primary_doc.xml) — 🟢 primary.
 
+---
+
+## Update — 2026-09-13 (third AUM data point; routine freshness check)
+
+Fresh web checks against AG Dillon's own site, Forge/EquityZen/Hiive, Fundrise VCX/ARK/Destiny Tech100, and broader PE market conditions found nothing materially changed since the 2026-09-11/09-12 checks: the firm's own funds page still shows the stale "Sep 2025, 25 funds/$140M AUM" marketing figure, no new Form D beyond AGDF28/29/30/32 (AGDF31 gap still unresolved), and no fee/ownership changes at Forge, EquityZen, or Hiive.
+
+One new, distinct data point on firm scale:
+
+- **Aaron Dillon's own LinkedIn company-page profile** (`linkedin.com/in/aarondillonnyc`, "F Position"/"F Summary" fields, current as scraped 2026-09-13) states: *"AG Dillon & Co is a venture capital asset manager for wealth management firms... $221 million assets under management, 45 wealth management firm partners."* 🟡 issuer-claim (Aaron Dillon's own profile copy), not independently filed — but a distinct, directly-attributable figure, not a repeat of either number already on file.
+- This is a **third** AUM figure now in circulation, alongside the firm site's $140M (Sep 2025, stale) and the SEC/FINTRX/RIA Intel $262M (AG Dillon Asset Management LP, Form ADV as of May 2026). $221M sits between the two and does not resolve which (if either) is current — flagging as an open discrepancy rather than picking one. The 45-partner count matches the firm site's own figure exactly, which is the one point of internal consistency across sources.
+- Not treated as material enough to warrant interruption on its own (no fund/fee/competitor change, just a third self-reported number of imprecise date), but recorded per the routine's sourcing/labeling requirement rather than silently dropped.
+
+No push to the top10-ranked-vehicles report this run — no vehicle's ranking-relevant figures changed.
+
