@@ -235,3 +235,26 @@ already-reported figures, not new information. The PR #1 merge-blocker was last 
 **Additional sources:**
 - [PE Secondaries Market 2026: The $240B Data Breakdown — AngelInvestorsNetwork, updated 2026-09-05](https://angelinvestorsnetwork.com/market-analysis/private-equity-secondaries-market-2026-data)
 - [Private Equity Trends 2026: Slower Exits and Shifting Demand — With Intelligence, 2026-09-10](https://www.withintelligence.com/insights/private-equity-trends-2026/)
+
+## Update — 2026-09-14
+
+**Row #2 (Fundrise Innovation Fund) price update:** VCX's market price has fallen materially since
+the Aug 18, 2026 snapshot ($41.25) this row's "NAV / return" column was last built from. Three
+independent live-quote sources agree on **$33.50 as of Sep 12, 2026** (Fidelity Digital Investor,
+Investing.com's Sep 13 read, and MarketChameleon's Sep 2 read of $35.37 showing the decline already
+underway) — a ~19% drop, consistent with the accelerated Aug 13 lockup expiration on file and with
+third-party commentary (Angel Investors Network, 2026-09-07) that explicitly predicted this kind of
+premium compression once legacy holders gained the ability to sell. Against the $21.70 NAV already
+on file (Jun 30, 2026 N-PORT), VCX now trades at roughly a **54% premium to NAV** — still large, but
+down from the ~117%+ premium implied by the Aug 18 price. Not treated as a ranking change: VCX
+remains #2 on transparency/holdings-disclosure grounds regardless of its market price, and the
+premium-compression trend was already flagged as the expected direction in this report's existing
+confidence-flag language. **Row #1 (Destiny Tech100)** re-checked at $32.0–$32.9 (Sep 13, 2026,
+Investing.com/Kraken) — within the ~5% discount-to-NAV range already on file since 2026-09-06, no
+change. **Row #8 (AG Dillon)** unchanged this run at the report-row level — see
+`offerings/ag-dillon/current-offerings.md` and `research/agdillon-competitive-landscape.md`'s
+2026-09-14 updates for the Positron identity finding and the further-corroborated (still
+unresolved) AGDF31 numbering gap, neither of which moves this row's AUM/fee figures. No other row
+changed.
+
+Sources: [VCX quote — Fidelity Digital Investor, checked 2026-09-14](https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=VCX); [VCX quote, Sep 13, 2026 — Investing.com](https://www.investing.com/equities/fundrise-innovation-fund); [VCX quote, Sep 2, 2026 — MarketChameleon](https://marketchameleon.com/Overview/VCX/Summary/); [DXYZ quote, Sep 13, 2026 — Investing.com](https://www.investing.com/equities/destiny-tech100).

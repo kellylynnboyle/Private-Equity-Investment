@@ -180,3 +180,70 @@ to named Jefferies/Campbell Lutyens primary reports) — not a change to AG Dill
 figure in this file. PR #1 remains 21 days old, `mergeable_state: clean`, unmerged; no new blocker
 notification sent this run per the throttle (last sent 2026-09-01, next due ~2026-09-16 absent a
 new development).
+
+## Update — 2026-09-14
+
+Fresh checks across every tracked name found no competitor entrant, exit, fee change, or
+ownership change versus the 2026-09-12 baseline: **Forge** (Schwab subsidiary, homepage/press
+page unchanged since the March 2 close), **EquityZen** (Morgan Stanley-owned, 2.5% fee
+unchanged), **Hiive** (site still cites the same $300M+/month volume and $2B+ live-orders
+figures; a live Hiive50 spot-check on 2026-09-14 showed the index at 173.58, +73.66% all-time,
+and updated per-name prices — e.g. Tenstorrent $107.11, up sharply from the $62.30 snapshot
+recorded 2026-08-22 — but this is ordinary market-price movement in the underlying names, not a
+Hiive fee/structure change, and is not pushed to `offerings/hiive/current-offerings.md` this run
+since no house rule requires tracking daily secondary-price noise), **Alumni Ventures**, and the
+smaller Tier 1 names (**Augment, Jarsy, North Capital PPEX, FNEX, MicroVentures, StartEngine
+Secondary**) — spot-checked Augment's and Jarsy's own sites directly; both show the same
+mechanics/minimums already on file (Augment: $10K min, FINRA-registered ATS, "$1B+ AUM as of
+April 2026" now on the homepage — up from the $400M+ figure recorded 2026-08-31, but not
+independently dated/sourced beyond the site's own "as of" tag, so flagged 🟡 issuer claim rather
+than treated as a confirmed AUM jump; Jarsy: still self-describes as an "investing platform" with
+no broker-dealer/RIA claim, consistent with the existing non-registered-entity caveat). No change
+made to any of these individual `offerings/` files this run — the Augment AUM figure is noted here
+rather than edited into `offerings/augment/current-offerings.md` pending independent corroboration,
+per this repo's sourcing bar.
+
+**AG Dillon:** resolved (high confidence) the open question this repo has carried since the
+2026-09-07(2) update — which company "Positron Fund" (from Kelly's 2026-09-14 advisor-portal
+table) refers to. It is almost certainly **Positron AI** (positron.ai), the Reno, NV AI-inference
+chip startup — not the aerospace/reentry-vehicle company of the same name, which produced no
+comparable evidence in this search. The identification rests on an exact asset-class match
+(Kelly's table: "AI Infrastructure (Semiconductors)") plus decisive timing: Positron AI closed an
+$875M Series C at a $5B valuation on **2026-09-10**, up 4x from its $1.06B Series B just seven
+months earlier — precisely the kind of freshly-repriced, high-demand name AG Dillon has
+historically built single-stock funds around. Full sourcing and the corroborating detail in
+`offerings/ag-dillon/current-offerings.md`'s 2026-09-14(2) update. Also ran a fifth, methodologically
+distinct EDGAR check (company-name browse rather than full-text search) and found zero registrants
+for AGDF31 or AGDF33+, and zero Form D hits for "Positron Fund" or "Harvey Fund" by name — the
+numbering gap and the advisor-portal names both remain unresolved as to *why*, but the absence is
+now corroborated across five independent search methods. No new AGDF Form D since AGDF32
+(2026-09-04); AG Dillon's own site AUM figure unchanged (still the stale $140M/Sep 2025 line) — the
+three-way AUM discrepancy ($140M site / $221M LinkedIn / $262M Form ADV) stands with no new data
+point either way.
+
+**Fundrise Innovation Fund (VCX):** market price has fallen materially since the Aug 18 ($41.25)
+snapshot on file — multiple live-quote sources (Fidelity, Investing.com, MarketChameleon) put VCX
+at **$33.50 (Sep 12, 2026)**, down ~19%, following the accelerated lockup (Aug 13) and consistent
+with third-party commentary (Angel Investors Network, 2026-09-07) predicting exactly this kind of
+premium compression once legacy holders gained the ability to sell. Against the $21.70 NAV already
+on file (Jun 30, 2026 N-PORT), VCX still trades at roughly a 54% premium — large, but well down from
+the ~117%+ premium implied by the Aug 18 price. This is a market-price move, not a fund-level
+NAV/fee/AUM change, so it is logged here and in `reports/top10-ranked-vehicles.md` rather than
+treated as a fee/structural update to the offerings file. **Destiny Tech100 (DXYZ)** unchanged:
+multiple sources (Investing.com, Kraken, stockanalysis.com aggregator quotes) put it at
+$32.0–$32.9 as of Sep 13, 2026, consistent with the ~5% discount-to-NAV range already on file
+since 2026-09-06 — no material move. **ARK Venture Fund**: no newer monthly holdings CSV than the
+08/31/2026 snapshot already on file was located this run.
+
+No push notification sent this run: the Positron identification is a genuine research finding
+(explicitly asked for by Kelly) but does not itself move any fee/AUM/NAV figure or add/remove a
+competitor from the ranked list, and the VCX price move was already anticipated by sources on file.
+PR #1 merge-blocker status not re-checked or re-flagged this run per the existing throttle/handling
+convention (owned outside this task).
+
+**Additional sources:**
+- [Positron AI raises $875M Series C at $5B valuation — Reuters via Investing.com, 2026-09-10](https://www.investing.com/news/stock-market-news/ai-chip-startup-positrons-valuation-skyrockets-in-latest-funding-round-4896462)
+- [Positron AI raises $230M Series B at $1B+ valuation — TechCrunch, 2026-02-04](https://techcrunch.com/2026/02/04/exclusive-positron-raises-230m-series-b-to-take-on-nvidias-ai-chips/)
+- [Fundrise Innovation Fund (VCX) quote — Fidelity Digital, checked 2026-09-14](https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=VCX)
+- [VCX quote, Sept 2, 2026 — MarketChameleon](https://marketchameleon.com/Overview/VCX/Summary/)
+- [Destiny Tech100 (DXYZ) quote, Sep 13, 2026 — Investing.com](https://www.investing.com/equities/destiny-tech100)
