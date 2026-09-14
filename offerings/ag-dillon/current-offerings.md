@@ -106,3 +106,23 @@ One new, distinct data point on firm scale:
 
 No push to the top10-ranked-vehicles report this run — no vehicle's ranking-relevant figures changed.
 
+---
+
+## Update — 2026-09-14 (Kelly-provided: named currently-open funds, from AG Dillon's advisor portal)
+
+Kelly Lynn Boyle directly provided the following table of AG Dillon's **current fund offerings**, evidently pulled from AG Dillon's password-gated financial-advisor portal (each row links to a fact sheet — the advisor-only content this file has flagged since 2026-08-22 as inaccessible to this routine without credentials). This is the first advisor-portal-sourced data point in this file and materially fills the gap the 2026-09-07(2) update flagged explicitly: *"no specific company/stock name is publicly confirmed for any [currently open fund]."*
+
+| Fund | Asset Class |
+| --- | --- |
+| Harvey Fund 2 | AI Application (Legal) |
+| Glean Fund 2 | AI Application (General Enterprise) |
+| Together AI Fund 3 | AI Infrastructure (Inference Platform) |
+| Positron Fund | AI Infrastructure (Semiconductors) |
+| Baseten Fund | AI Infrastructure (Inference Platform) |
+
+🟡 **Sourcing note:** issuer-controlled, advisor-gated content relayed by Kelly, not independently fetched or cross-checked against EDGAR by this routine (these single-stock SPVs largely rely on Section 4(a)(2) exemptions and may file no Form D at all, consistent with the pattern already documented for other AGDF entities in this file). Treat as a current, directly-sourced snapshot of AG Dillon's live offering list — stronger than the aggregator/podcast inference used elsewhere in this file — but not filing-grade evidence. Not yet mapped to specific AGDF numbers/CIKs; the "Fund 2" / "Fund 3" suffixes indicate these are follow-on vehicles for companies AG Dillon has raised for before, not new portfolio names, except **Positron** and **Harvey**, neither of which appears in any prior update in this file.
+
+**Cross-reference:** four of these five names (Harvey, Glean, Together AI, Baseten) match the original sample SMA portfolio disclosed in AG Dillon's own fact sheet and recorded in this repo's earliest research (2026-08-22: "Anduril 25%, Together AI 12.5%, Baseten 25%, Glean 25%, Harvey 12.5% — 100% AI Defense/Infrastructure/Applications"). Positron now appears in place of Anduril, suggesting the SMA/current-offering roster has rotated at least one position since that original sample was captured, while Together AI, Baseten, Glean, and Harvey remain in continuous rotation (now on their 2nd or 3rd fund iteration for at least three of the four). Anduril itself is separately confirmed still open/raising via AGDF13 in the closed-cohort mapping above — its absence from this new list may reflect that its current vehicle is already closed/fully subscribed rather than an exit from the platform; not confirmed.
+
+No independent web verification attempted this update — the source is a direct, dated user-provided data point rather than a research finding requiring corroboration. A future run should attempt to locate Form D filings (or confirm their absence, consistent with Section 4(a)(2) reliance) for Positron and Harvey specifically, since those are the two names not otherwise attested elsewhere in this file.
+
