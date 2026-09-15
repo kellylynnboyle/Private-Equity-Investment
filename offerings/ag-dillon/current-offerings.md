@@ -145,3 +145,21 @@ Following up directly on the gap Kelly's advisor-portal table opened above (the 
 
 Sources: [Positron AI valuation/Series C, Reuters via Investing.com, 2026-09-10](https://www.investing.com/news/stock-market-news/ai-chip-startup-positrons-valuation-skyrockets-in-latest-funding-round-4896462) — 🟢; [Positron AI Series B, TechCrunch, 2026-02-04](https://techcrunch.com/2026/02/04/exclusive-positron-raises-230m-series-b-to-take-on-nvidias-ai-chips/) — 🟢; [positron.ai](https://www.positron.ai/) — 🟡 issuer's own site, used only to confirm product/business description, not financials; [agdillon.com/funds/](https://agdillon.com/funds/), checked 2026-09-14 — 🟡 issuer's own site, non-neutral; EDGAR company browse for AGDF31/AGDF33 (`sec.gov/cgi-bin/browse-edgar?action=getcompany&company=AGDF31...`), checked 2026-09-14 — 🟢 primary (absence of a filer record, not a document).
 
+---
+
+## Update — 2026-09-15 (routine freshness check; other sponsors' Positron AI SPVs found, AG Dillon's own filing status unchanged)
+
+Fresh checks against AG Dillon's own site, Forge/EquityZen/Hiive, Fundrise VCX, ARK Venture Fund, and Destiny Tech100 found no material change since the 2026-09-14 checks: firm site still shows the stale "Sep 2025, 25 funds/$140M AUM" line, no new AGDF Form D beyond AGDF32 (AGDF31 gap still unresolved), no fee/ownership changes at any Tier 1/Tier 2 competitor.
+
+**New context on the Positron AI SPV landscape (not an AG Dillon filing, but relevant background):** An EDGAR full-text search for "Positron AI" across all Form D filings turned up five filings from three *other*, unrelated sponsors — none of them AG Dillon — confirming Positron AI is a common target for competing single-purpose vehicles right now:
+- Positron AI, Inc.'s own primary Form D filings (CIK 0002077932), filed 2025-07-28 and 2026-05-12 (company's own capital raises, not a third-party SPV).
+- **Positron AI, Inc. SPV I, LP** (CIK 0002095798), filed 2025-11-06, Atlanta, GA — a dedicated feeder vehicle, sponsor not yet identified this run.
+- **HII Positron-01, a Series of HII Positron AI LLC** (CIK 0002139332), filed 2026-06-15, New York, NY.
+- **HII Positron-02, a Series of HII Positron AI-A LLC** (CIK 0002152449), filed 2026-09-01, New York, NY — items 06B/3C/3C.1, suggesting a pooled-investment-fund structure.
+
+None of these five filings name AG Dillon, AG Dillon LLC, or Aaron Dillon anywhere in the display names — consistent with (not proof of) the standing hypothesis that AG Dillon's own "Positron Fund" either relies on the Section 4(a)(2) exemption and files no Form D, or is filed under a name not yet located. Also re-ran the EDGAR full-text search for `"Positron Fund" "AG Dillon"` directly — still zero hits, unchanged from 2026-09-14. 🟢 primary source (SEC EDGAR full-text search); the "no AG Dillon Positron SPV found" conclusion remains an absence-of-evidence inference, not a confirmed fact.
+
+No push to `reports/top10-ranked-vehicles.md` this run — no ranking-relevant figure changed. No push notification sent — nothing material changed versus 2026-09-14, and PR #1's unmerged-blocker was last substantively surfaced to the user 2026-09-09 (bundled with the VCX finding notification), 6 days ago — within the ~weekly throttle window, not yet due for re-flag.
+
+Sources: [EDGAR full-text search, "Positron AI", forms=D](https://www.sec.gov/cgi-bin/srqsb?text=Positron+AI&first=1&last=40) (queried via `efts.sec.gov/LATEST/search-index`), checked 2026-09-15 — 🟢 primary.
+

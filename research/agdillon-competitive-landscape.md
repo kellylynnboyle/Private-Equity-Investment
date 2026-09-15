@@ -247,3 +247,28 @@ convention (owned outside this task).
 - [Fundrise Innovation Fund (VCX) quote — Fidelity Digital, checked 2026-09-14](https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=VCX)
 - [VCX quote, Sept 2, 2026 — MarketChameleon](https://marketchameleon.com/Overview/VCX/Summary/)
 - [Destiny Tech100 (DXYZ) quote, Sep 13, 2026 — Investing.com](https://www.investing.com/equities/destiny-tech100)
+
+---
+
+## Update — 2026-09-15 (routine freshness check)
+
+Fresh checks across AG Dillon, Tier 1 (Forge Global, EquityZen, Hiive), Tier 2 (Fundrise VCX, ARK
+Venture Fund, Destiny Tech100), and broader PE market conditions found no material change versus
+2026-09-14: no new AGDF Form D, no competitor fee/ownership change, DXYZ and VCX prices within
+already-documented ranges (DXYZ ~$32.11 vs. $34.30 NAV, a discount consistent with the range on
+file since 2026-09-06; VCX unchanged at ~$33.50, ~54% premium to the $21.70 NAV). Confirmed the
+previously-flagged, still-unverified "VCX 2" follow-on-fund lead (CIK 0002138533) remains
+unresolved — no new filing found at that CIK. Broader market color (PEI's 2026 Secondaries report,
+$3.7T dry powder, 800+ unicorn IPO backlog, CVC's new €26B Fund X target, wealth-channel GP-led
+secondaries scaling per The Secondary Brief 2026-09-14) is consistent with figures already in
+`reports/top10-ranked-vehicles.md` — no update needed there.
+
+One minor addition, logged in `offerings/ag-dillon/current-offerings.md`'s 2026-09-15 section: an
+EDGAR full-text search for "Positron AI" across all Form D filings found five filings from three
+other, unrelated SPV sponsors (none of them AG Dillon) — confirms Positron AI is a common
+single-purpose-vehicle target right now, but does not resolve whether AG Dillon's own "Positron
+Fund" ever files a Form D.
+
+No push notification sent this run — nothing material changed, and the PR #1 unmerged-blocker
+(now 24 days old) was last substantively surfaced to the user 2026-09-09, 6 days ago, within the
+~weekly throttle window.
