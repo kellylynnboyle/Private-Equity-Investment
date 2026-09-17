@@ -272,3 +272,35 @@ Fund" ever files a Form D.
 No push notification sent this run — nothing material changed, and the PR #1 unmerged-blocker
 (now 24 days old) was last substantively surfaced to the user 2026-09-09, 6 days ago, within the
 ~weekly throttle window.
+
+---
+
+## Update — 2026-09-17 (routine freshness check)
+
+Fresh checks across AG Dillon, Tier 1 (Forge Global, EquityZen, Hiive), Tier 2 (Fundrise VCX, ARK
+Venture Fund, Destiny Tech100), and broader PE market conditions found no material change versus
+2026-09-15: AG Dillon's own site/funds page still shows the stale "25 funds / $140M AUM (Sep
+2025)" figure with no new Form D beyond AGDF32; the AGDF31 numbering gap remains unresolved (not
+re-tested via full-form EDGAR search this run — no new lead surfaced to justify it). LinkedIn's
+$221M AUM / 45-partner figure is unchanged. Forge/EquityZen/Hiive fee and ownership terms are
+unchanged (2.5% EquityZen post-Morgan Stanley, Forge under Schwab, Hiive independent with 0%
+mgmt/carry Hiive Funds) — reconfirmed via two independent 2026 comparison write-ups, both matching
+figures already on file. ARK Venture Fund's 08/31/2026 top-10 holdings snapshot (Kalshi, Ayar
+Labs, OpenAI, Stripe, ...) matches what's already captured — no newer monthly CSV located. DXYZ
+traded $31.57 (Sep 14 close) / $31.49 (Sep 15 pre-market), within the discount-to-NAV range already
+documented since 2026-09-06.
+
+One confidence flag, not a material change: an aggregator (Macroaxis) reported a VCX NAV of $36.99
+as of 2026-09-02, which conflicts with the $33.50 real market price and $21.70 filed N-PORT NAV
+already on file as of 2026-09-12/15. 🔴 Excluding this figure as unreliable, consistent with how
+the conflicting CEF Connect DXYZ figure was handled on 2026-09-11 — aggregator NAV estimates that
+disagree with the filed N-PORT or a live market quote are not adopted without a primary source.
+Separately, a 2026-09-15 Financial Samurai piece lays out NAV-estimation methodology projecting
+~$31/share at lockup expiration and $33-38/share by year-end 2026 — consistent with, not a
+supersession of, the $33.50 market price and prior Financial Samurai analysis already on file;
+noted here for context only, not treated as new information (non-neutral source, author discloses
+a personal VCX/Anthropic position, flagged per the repo's existing convention for this source).
+
+No push notification sent this run — nothing material changed. PR #1's unmerged-blocker was last
+substantively surfaced to the user 2026-09-11 (per the 2026-09-16 run's correction to the throttle
+tracking); the next re-flag is due ~2026-09-18, not yet reached.

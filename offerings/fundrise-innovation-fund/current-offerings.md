@@ -103,3 +103,13 @@ verified independently via
 Anthropic/Databricks) has not been independently pulled from the N-PORT by this run — a future
 run should fetch the XML directly (not just the header) to confirm the complete weight table.
 
+---
+
+## Update — 2026-09-17 (confidence flag, no material change)
+
+Macroaxis reports a VCX NAV of $36.99 as of 2026-09-02 (its site copy dated 2026-09-03). This
+conflicts with the $33.50 real market price and $21.70 filed N-PORT NAV already documented above
+(2026-09-12/15 checks) and is not independently sourced to a filing. 🔴 Excluding it as unreliable
+aggregator data, consistent with how the conflicting CEF Connect DXYZ figure was handled
+2026-09-11 elsewhere in this repo — no change made to the NAV or price figures above.
+
