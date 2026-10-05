@@ -67,7 +67,7 @@ Replace angle-bracket terms. Use the current month and year.
 | --- | --- | --- | --- |
 | 1 | `Tom Sosnoff <underlying or theme> <month year>`; `tastylive market measures <topic>`; `tastytrade <strategy> <year>` | `GreenTraderTax <Section 1256 / wash sale options / Section 475 / straddle> <year>` | None |
 | 2 | `Carter Worth <ticker or sector> <month year>`; `Worth Charting <150-day / breakout / relative strength>`; `Carter Worth CNBC Fast Money <month year>` | `Kitces <harvesting gains / tax-loss harvesting / asset location / net investment income tax>` | 10-K, 10-Q, 8-K for the name; 13F-HR for Altimeter, Atreides, or ARK to check whether a call matches their positioning; Form 4 for insider sales |
-| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` | Form D for each round (size, date, issuer CIK), noting that many late-stage issuers rely on Section 4(a)(2) and file none; a full-text search on the company name across all forms finds public holders' N-PORT marks (T. Rowe Price, First Trust, ARK Venture) and customers' or partners' 6-K, 8-K, and 10-K mentions, which are the best filing-grade evidence on a private company; S-1 or 424B4 once public. Confidential draft registrations are not on EDGAR until 15 days before the roadshow |
+| 3 | `Brad Gerstner <company or theme> <month year>`; `BG2 pod <topic>`; `Gavin Baker Atreides <company> <month year>`; `Cathie Wood ARK Venture <company> <month year>` | `myStockOptions <QSBS / 83(b) / ISO AMT / tender offer> <year>`; `QSBS Section 1202 <year>` | Form D for each round (size, date, issuer CIK), noting that many late-stage issuers rely on Section 4(a)(2) and file none; a full-text search on the company name across all forms finds public holders' N-PORT marks (T. Rowe Price, First Trust, ARK Venture) and customers' or partners' 6-K, 8-K, and 10-K mentions, which are the best filing-grade evidence on a private company; `forgeglobal.com/<company>_stock/` for a certificate-of-incorporation round-by-round cap table (price per share, investors per round) when checking whether a specific fund invested; S-1 or 424B4 once public. Confidential draft registrations are not on EDGAR until 15 days before the roadshow |
 | 4 | `Damodaran <company> valuation <year>`; `Ritter IPO long-run returns <year>`; `<company> lock-up expiration date shares`; `Renaissance IPO ETF holdings <month year>` | `Kristin McKenna <company> lockup <year>`; `Darrow Wealth <10b5-1 / RSU / concentrated stock> <year>` | S-1 and 424B4 for lock-up terms and share counts; 10-Q for the first public quarters; Form 4 and 144 for insider sales after release; 13F-HR for who holds it |
 | 5 | `Morningstar <ticker> analysis <year>`; `JEPI fact sheet <month year>`; `Calamos CAIE autocallable dashboard`; `<ticker> holdings <month year>` | `Christine Benz tax-efficient <fund type> <year>`; `<ticker> 19a notice return of capital`; `<ticker> Form 8937` | N-1A or 485BPOS (prospectus: barriers, counterparties, fee); N-PORT (holdings); N-CSR (annual report, distribution character). Registrant is the trust (for example ARK ETF Trust), not the ticker |
 
@@ -98,6 +98,20 @@ file date, then take the position data from at least two independent
 13F parsers (13f.info, stockzoa, Dealroom's filing-matched notes) and
 label it "13F via aggregator, filing not opened." Never label aggregator
 data as the filing itself.
+
+For a private company's cap table and investor-by-round list (lens 3),
+Forge's own company page is a stronger non-filing source than a generic
+aggregator (Tracxn, Crunchbase, PitchBook summaries, Startup Intros):
+`https://forgeglobal.com/<company-slug>_stock/`. Its "Funding round and
+deals details" table is built from the company's certificates of
+incorporation and gives price per share, shares outstanding, and named
+investors per round. Verified on 2026-09-05 when it was the only source
+that caught a generic aggregator wrongly listing a fund as an Impulse
+Space investor across five rounds; the certificate-based Forge table had
+no such investor in any round, and the company's own Series A and D
+press releases corroborated Forge, not the aggregator. Treat Forge's
+round table as corroboration, not a filing, but prefer it over any
+aggregator that does not cite a primary source.
 
 ## Pairings and handoffs
 
