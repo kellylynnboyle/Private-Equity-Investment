@@ -58,6 +58,17 @@ run them inside the same pass.
    filing or a price.
    State position bias: fund managers and issuers describe their own
    products; academics and Morningstar analysts hold no positions.
+   Separately, mark entity-identification confidence whenever the source
+   material names a company, platform, or fund incompletely (a logo image
+   stripped from pasted text, an unlabeled row in a table, a nickname).
+   State confirmed, high, medium, or low confidence per entity and say what
+   would resolve it. Never present a medium- or low-confidence match as if
+   it were confirmed.
+   Separately, mark ownership-weight claims apart from stated-conviction
+   claims. A holdings percentage, a 13F weight, or a trade-notification
+   size is ownership data; it is not evidence of relative conviction unless
+   the expert has said so directly. Do not produce a "biggest conviction"
+   list from weight data alone — label it a weight ranking and say so.
 
 ## Query table
 
@@ -146,6 +157,53 @@ aggregator that does not cite a primary source.
   (low IV rank, buying far above the 150-day, unproven barrier management,
   oversized position) as if the mechanic did not exist.
 - The tax hand-off produces questions for a CPA, not tax advice.
+
+## Maintenance loop
+
+The routine itself drifts the same way any AI harness does: a lens file
+goes stale, a label gets skipped, a correction from one task never reaches
+the next. Run a maintenance pass — not a per-task retrieval — on one of
+these triggers:
+
+- **Something it relies on changes.** A lens file or the tax overlay
+  passes its ~90-day freshness window; the EDGAR lookup pattern stops
+  working as documented; a query-table source goes offline or renames.
+- **The job grows.** A task lands that is close to a lens but not named by
+  its trigger (for example, a pre-IPO secondary-marketplace comparison —
+  closest to lens 3 but not a "trade"). Note it in Scope or the routing
+  table rather than silently stretching a lens to fit.
+- **The human cost rises.** The same clarifying question keeps coming up,
+  or a user correction lands mid-task (not a new fact, a correction to how
+  the routine itself reasoned). That is a harness problem, not a one-off.
+- **A quiet failure appears.** A label was wrong in a way the user had to
+  catch (ownership counted as conviction, an aggregator figure presented
+  as a filing, an unconfirmed entity match presented as confirmed).
+
+When a trigger fires, check the seven parts in order and fix the cause
+before adding a new rule on top of it: **Job** (does the routing table
+still name this task?), **Diet** (lens file or tax overlay stale or
+wrong), **Memory** (a correction below should have prevented this and
+didn't), **Tools** (Parallel Search or EDGAR step mis-specified), **Reach**
+(nothing here should expand — this routine is read-only analysis, not
+execution), **Proof** (a label was missing or wrong), **Value** (is the
+tax hand-off and lens read actually what gets used, or rewritten).
+Prefer removing or narrowing the cause over bolting on a new instruction.
+
+### Corrections log
+
+Append one line per session where a user correction revealed a routine
+gap, not just a wrong fact. Each entry should be the kind of thing a new
+rule or lens edit should have prevented. Review this log before declaring
+a maintenance pass done.
+
+- 2026-10-06 — Asked for Cathie Wood's "biggest conviction" list; given
+  ARKVX holdings-by-weight instead. Weight is not conviction. Fixed by
+  adding the ownership-vs-conviction labeling rule to Step 6 above.
+- 2026-10-06 — A pasted platform-comparison table had its entity names
+  stripped (logos only, no text); proceeded toward identifying rows
+  without first confirming the gap with the user. Fixed by adding the
+  entity-identification-confidence labeling rule to Step 6 above, and by
+  asking before guessing when a future table is this ambiguous.
 
 ## Scope
 
