@@ -105,13 +105,12 @@ aggregator (Tracxn, Crunchbase, PitchBook summaries, Startup Intros):
 `https://forgeglobal.com/<company-slug>_stock/`. Its "Funding round and
 deals details" table is built from the company's certificates of
 incorporation and gives price per share, shares outstanding, and named
-investors per round. Verified on 2026-09-05 when it was the only source
-that caught a generic aggregator wrongly listing a fund as an Impulse
-Space investor across five rounds; the certificate-based Forge table had
-no such investor in any round, and the company's own Series A and D
-press releases corroborated Forge, not the aggregator. Treat Forge's
-round table as corroboration, not a filing, but prefer it over any
-aggregator that does not cite a primary source.
+investors per round — certificate-based, so it outranks a generic
+aggregator's investor list when the two disagree (confirmed 2026-09-05
+on a case where an aggregator named an investor no certificate or press
+release supported). Treat Forge's round table as corroboration, not a
+filing, but prefer it over any aggregator that does not cite a primary
+source.
 
 ## Pairings and handoffs
 
